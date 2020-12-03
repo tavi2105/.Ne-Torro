@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\Dotnetorro.csproj": {}
+    "c:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\Dotnetorro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\Dotnetorro.csproj": {
+    "c:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\Dotnetorro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\Dotnetorro.csproj",
+        "projectUniqueName": "c:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\Dotnetorro.csproj",
         "projectName": "Dotnetorro",
-        "projectPath": "C:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\Dotnetorro.csproj",
+        "projectPath": "c:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\Dotnetorro.csproj",
         "packagesPath": "C:\\Users\\ionut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\obj\\",
+        "outputPath": "c:\\Users\\ionut\\Documents\\Anul_III\\Semestrul_I\\Introducere_in_NET\\Dotnetorro\\Dotnetorro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -57,6 +57,26 @@
               "noWarn": [
                 "NU1605"
               ]
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.Extensions.ML": {
               "target": "Package",
