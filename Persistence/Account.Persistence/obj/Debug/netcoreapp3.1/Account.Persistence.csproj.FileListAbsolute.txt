@@ -1,0 +1,12 @@
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\bin\Debug\netcoreapp3.1\Account.Persistence.deps.json
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\bin\Debug\netcoreapp3.1\Account.Persistence.dll
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\bin\Debug\netcoreapp3.1\Account.Persistence.pdb
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\obj\Debug\netcoreapp3.1\Account.Persistence.csprojAssemblyReference.cache
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\obj\Debug\netcoreapp3.1\Account.Persistence.AssemblyInfoInputs.cache
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\obj\Debug\netcoreapp3.1\Account.Persistence.AssemblyInfo.cs
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\obj\Debug\netcoreapp3.1\Account.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\obj\Debug\netcoreapp3.1\Account.Persistence.dll
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\obj\Debug\netcoreapp3.1\Account.Persistence.pdb
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\bin\Debug\netcoreapp3.1\Account.Persistence.runtimeconfig.json
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\bin\Debug\netcoreapp3.1\Account.Persistence.runtimeconfig.dev.json
+C:\Users\bpantaru\Desktop\.netorro\.Ne-Torro\NeTorro\Persistence\Account.Persistence\obj\Debug\netcoreapp3.1\Account.Persistence.genruntimeconfig.cache
