@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZxqYs5RiMNOl0SanAHZIFr2YZP0hfCmf9nsrEBBhGsQ1rc5gnpPL7dvJbFJS0BUWL2Eh05NIMg6l+I58AlS+vg==",
+  "dgSpecHash": "Nqd6p7Dc6hvGxH9s4lrGEt9WLPeO5CHPzNNdgigM08o5znSv7iXk0EqUW7Oqiv06HwUkpzY0sY5A8di2M7rVfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Services\\AccountApi\\AccountApi.csproj",
+  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Services\\AccountApi\\AccountApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bpantaru\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "C:\\Users\\bpantaru\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",

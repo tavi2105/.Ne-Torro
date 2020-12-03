@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj": {}
+    "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj": {
+    "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj",
         "projectName": "Predictions.Persistence",
-        "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj",
+        "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj",
         "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Predictions.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Predictions.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

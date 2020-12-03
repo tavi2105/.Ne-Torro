@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Account.Persistence\\Account.Persistence.csproj": {}
+    "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Account.Persistence\\Account.Persistence.csproj": {
+    "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
         "projectName": "Account.Persistence",
-        "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
+        "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
         "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Account.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Account.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

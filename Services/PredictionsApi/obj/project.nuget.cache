@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5Nr/ksdL84sH361UUX3EOl0CFK3vTBivCKsY6NODIyaLAJT1qQH+Xb3/4AZ1CveF175LqYI1NxMv9eyreKzjag==",
+  "dgSpecHash": "4EPPSCIzA/RX9n4d1tQZBk2spWmUuCm1rvCuIweRdSZzcvAo3NsHQbUgS4e+bYAe4o4UI5mEIvkA4YvePsNwew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Services\\PredictionsApi\\PredictionsApi.csproj",
+  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Services\\PredictionsApi\\PredictionsApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bpantaru\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\bpantaru\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",

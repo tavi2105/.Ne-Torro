@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xzV+zFn9otmnxboA5Bi+FR9783/aM9eXFbdURyOAvxxzA5Nyouzr2Ayha9QSEh4INGzA2/IsKhdD3PALlvwLlw==",
+  "dgSpecHash": "erP1A1GNiOtj17TxTXPZMW4PL1ytX47PADb760zw+5WigptbpMGQbOjD1Hdzb65toAbvRireLievWCtMtrxg6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Services\\EconomyBudgetApi\\EconomyBudgetApi.csproj",
+  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Services\\EconomyBudgetApi\\EconomyBudgetApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bpantaru\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "C:\\Users\\bpantaru\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",

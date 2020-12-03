@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\ApiGateway\\ApiGateway.csproj": {}
+    "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\ApiGateway\\ApiGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\ApiGateway\\ApiGateway.csproj": {
+    "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\ApiGateway\\ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\ApiGateway\\ApiGateway.csproj",
+        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\ApiGateway\\ApiGateway.csproj",
         "projectName": "ApiGateway",
-        "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\ApiGateway\\ApiGateway.csproj",
+        "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\ApiGateway\\ApiGateway.csproj",
         "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\ApiGateway\\obj\\",
+        "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

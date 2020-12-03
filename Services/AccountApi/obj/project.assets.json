@@ -5488,11 +5488,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Services\\AccountApi\\AccountApi.csproj",
+      "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Services\\AccountApi\\AccountApi.csproj",
       "projectName": "AccountApi",
-      "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Services\\AccountApi\\AccountApi.csproj",
+      "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Services\\AccountApi\\AccountApi.csproj",
       "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Services\\AccountApi\\obj\\",
+      "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Services\\AccountApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5512,8 +5512,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Business\\Account.Business\\Account.Business.csproj": {
-              "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Business\\Account.Business\\Account.Business.csproj"
+            "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj": {
+              "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj"
             }
           }
         }

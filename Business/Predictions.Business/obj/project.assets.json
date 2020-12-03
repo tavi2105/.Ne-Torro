@@ -5679,11 +5679,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Business\\Predictions.Business\\Predictions.Business.csproj",
+      "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Business\\Predictions.Business\\Predictions.Business.csproj",
       "projectName": "Predictions.Business",
-      "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Business\\Predictions.Business\\Predictions.Business.csproj",
+      "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Business\\Predictions.Business\\Predictions.Business.csproj",
       "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Business\\Predictions.Business\\obj\\",
+      "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Business\\Predictions.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5703,8 +5703,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj": {
-              "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj"
+            "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj": {
+              "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Predictions.Persistence\\Predictions.Persistence.csproj"
             }
           }
         }

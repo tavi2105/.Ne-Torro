@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TjfPHCRx2HB9NkCNPvo4oJsbQyg5gShqA73zMQAAbUvV0B8gs1W9E0N5tJOd+r6Rg/6UpURJcHUtmWgyg9Lliw==",
+  "dgSpecHash": "MB18BTrKZulNh4IDTW79cTLfaEGuUvZK0GOVi28fSP5RF4ZK1ziBUqHChjhBHCR9MQIHDz16mlX4mhvGQSwS6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bpantaru\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\bpantaru\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

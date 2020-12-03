@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj": {}
+    "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj": {
+    "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj",
         "projectName": "BudgdetEconomy.Persistence",
-        "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj",
+        "projectPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj",
         "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\BudgdetEconomy\\obj\\",
+        "outputPath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\BudgdetEconomy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

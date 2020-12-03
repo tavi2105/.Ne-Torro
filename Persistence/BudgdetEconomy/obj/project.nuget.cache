@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SCi9/G6Ki+qVTT3Xbtra0f/p6XTY5swNxcBKCSEzAY63adk1QAcsT2Ae9pKZCs43g0eM8th3h4SEYE6QMmos2w==",
+  "dgSpecHash": "1eDeGCfBM1F4xUC35RZBI6Sx+r+fxSjnKZl0PcODJ4/BRJ3mEzGcuZY5+c2MBzo4NcaATKlzX6/mDmFwXrip9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Persistence\\BudgdetEconomy\\BudgdetEconomy.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bpantaru\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\bpantaru\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

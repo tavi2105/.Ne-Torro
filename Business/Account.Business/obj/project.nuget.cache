@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GOTCo/tnnxOmJ0+JNbyricTuKMozO5TTPb4VXObvN8Ik/WWybeSH1bBF3GUoVxyIUtWcXwn1nZ/W82XnA9QGKA==",
+  "dgSpecHash": "Nl4OTxG0WnbhkkeDFk4cK+Uplucup4sG2XtICrIp4bdU1ftIoQU+8cCL5Acof4XgzRa+28A2sKTQXRN1WcLpag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\.Ne-Torro\\NeTorro\\Business\\Account.Business\\Account.Business.csproj",
+  "projectFilePath": "C:\\Users\\bpantaru\\Desktop\\.netorro\\clona\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\bpantaru\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
