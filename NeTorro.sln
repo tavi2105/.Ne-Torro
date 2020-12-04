@@ -21,15 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Business", "Busines
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Predictions.Business", "Business\Predictions.Business\Predictions.Business.csproj", "{10A25F5F-D8DC-4AF8-8F81-9C0B2CE2062B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetEconomy.Business", "Business\BudgetEconomy.Business\BudgetEconomy.Business.csproj", "{5F17BB60-72AD-4349-B267-D406640DA33D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BudgetEconomy.Business", "Business\BudgetEconomy.Business\BudgetEconomy.Business.csproj", "{5F17BB60-72AD-4349-B267-D406640DA33D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Persistence", "Persistence\Account.Persistence\Account.Persistence.csproj", "{07D0040F-6CD0-4644-94B3-2E9357E962AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Persistence", "Persistence\Account.Persistence\Account.Persistence.csproj", "{07D0040F-6CD0-4644-94B3-2E9357E962AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgdetEconomy.Persistence", "Persistence\BudgdetEconomy\BudgdetEconomy.Persistence.csproj", "{E3C59EC6-0361-444C-9F3C-DE1DF007DC9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BudgdetEconomy.Persistence", "Persistence\BudgdetEconomy\BudgdetEconomy.Persistence.csproj", "{E3C59EC6-0361-444C-9F3C-DE1DF007DC9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Predictions.Persistence", "Persistence\Predictions.Persistence\Predictions.Persistence.csproj", "{43937561-5A6C-400B-9F9E-929240B0321D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Predictions.Persistence", "Persistence\Predictions.Persistence\Predictions.Persistence.csproj", "{43937561-5A6C-400B-9F9E-929240B0321D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{057CCB1E-BB00-4121-9452-E7C2DEF4F014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredictionsWebApp", "PredictionsWebApp\PredictionsWebApp.csproj", "{670310C3-49A5-44A3-9E7A-FFE804BB0B04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{43937561-5A6C-400B-9F9E-929240B0321D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43937561-5A6C-400B-9F9E-929240B0321D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43937561-5A6C-400B-9F9E-929240B0321D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670310C3-49A5-44A3-9E7A-FFE804BB0B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670310C3-49A5-44A3-9E7A-FFE804BB0B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670310C3-49A5-44A3-9E7A-FFE804BB0B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670310C3-49A5-44A3-9E7A-FFE804BB0B04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
