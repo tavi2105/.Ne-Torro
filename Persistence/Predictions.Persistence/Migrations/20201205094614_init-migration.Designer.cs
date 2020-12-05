@@ -10,8 +10,8 @@ using Predictions.Persistence;
 namespace Predictions.Persistence.Migrations
 {
     [DbContext(typeof(PredictionContext))]
-    [Migration("20201203214637_PredictionIntialCreate")]
-    partial class PredictionIntialCreate
+    [Migration("20201205094614_init-migration")]
+    partial class initmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,14 +60,26 @@ namespace Predictions.Persistence.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<double>("ClosePrice")
+                        .HasColumnType("float");
+
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("Price")
+                    b.Property<double>("HighPrice")
                         .HasColumnType("float");
+
+                    b.Property<double>("LowPrice")
+                        .HasColumnType("float");
+
+                    b.Property<double>("OpenPrice")
+                        .HasColumnType("float");
+
+                    b.Property<long>("Volume")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
@@ -77,23 +89,35 @@ namespace Predictions.Persistence.Migrations
                         new
                         {
                             Id = 1,
+                            ClosePrice = 110.0,
                             CompanyId = 1,
-                            Date = new DateTime(2020, 12, 3, 23, 46, 36, 488, DateTimeKind.Local).AddTicks(6372),
-                            Price = 100.0
+                            Date = new DateTime(2020, 12, 5, 11, 46, 13, 756, DateTimeKind.Local).AddTicks(4382),
+                            HighPrice = 222.0,
+                            LowPrice = 33.0,
+                            OpenPrice = 100.0,
+                            Volume = 2323L
                         },
                         new
                         {
                             Id = 2,
+                            ClosePrice = 110.0,
                             CompanyId = 2,
-                            Date = new DateTime(2020, 12, 3, 23, 46, 36, 490, DateTimeKind.Local).AddTicks(9685),
-                            Price = 100.0
+                            Date = new DateTime(2020, 12, 5, 11, 46, 13, 758, DateTimeKind.Local).AddTicks(812),
+                            HighPrice = 422.0,
+                            LowPrice = 33.0,
+                            OpenPrice = 100.0,
+                            Volume = 4321L
                         },
                         new
                         {
                             Id = 3,
+                            ClosePrice = 110.0,
                             CompanyId = 3,
-                            Date = new DateTime(2020, 12, 3, 23, 46, 36, 490, DateTimeKind.Local).AddTicks(9759),
-                            Price = 100.0
+                            Date = new DateTime(2020, 12, 5, 11, 46, 13, 758, DateTimeKind.Local).AddTicks(839),
+                            HighPrice = 5622.0,
+                            LowPrice = 100.0,
+                            OpenPrice = 100.0,
+                            Volume = 5212L
                         });
                 });
 #pragma warning restore 612, 618

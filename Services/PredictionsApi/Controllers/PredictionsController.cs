@@ -3,7 +3,7 @@ using Predictions.Persistence;
 
 namespace PredictionsApi.Controllers
 {
-    [Route("/api/v0/predictions")]
+    [Route("/api/v1/predictions")]
     public class PredictionsController : Controller
     {
         private readonly IPredictionRepository _repository;

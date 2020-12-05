@@ -1,4 +1,6 @@
-﻿namespace BudgdetEconomy.Persistence
+﻿using System;
+
+namespace BudgdetEconomy.Persistence
 {
     class Economy
     {
@@ -9,5 +11,6 @@
         public double CurrentBudget { get; set; }
 
         public double CurrentExpense { get; set; }
+        public DateTime Date { get; set; }
     }
 }
