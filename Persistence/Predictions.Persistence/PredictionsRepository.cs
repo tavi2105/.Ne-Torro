@@ -15,7 +15,7 @@ namespace Predictions.Persistence
         }
         public List<Prediction> GetPredictions()
         {
-            return _context.Predictions.ToList();
+            return _context.Predictions.Take(100).ToList();
         }
         public Prediction GetPredictionsById(int id)
         {
