@@ -3,50 +3,52 @@
 @using Models
 @inject IPredictionService Service
 
-@if (predictions == null)
-{
-    <p><em>Loading predictions...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>CompanyId</th>
-                <th>Date</th>
-                <th>LowPrice</th>
-                <th>HighPrice</th>
-                <th>OpenPrice</th>
-                <th>ClosePrice</th>
-                <th>Volume</th>
+    <h1>Company stock price predictions</h1>
 
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var prediction in predictions)
-            {
+    @if (predictions == null)
+    {
+        <p><em>Loading predictions...</em></p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@prediction.CompanyId</td>
-                    <td>@prediction.Date</td>
-                    <td>@prediction.LowPrice</td>
-                    <td>@prediction.HighPrice</td>
-                    <td>@prediction.OpenPrice</td>
-                    <td>@prediction.ClosePrice</td>
-                    <td>@prediction.Volume</td>
+                    <th>CompanyId</th>
+                    <th>Date</th>
+                    <th>LowPrice</th>
+                    <th>HighPrice</th>
+                    <th>OpenPrice</th>
+                    <th>ClosePrice</th>
+                    <th>Volume</th>
 
                 </tr>
-            }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+                @foreach (var prediction in predictions)
+                {
+                    <tr>
+                        <td>@prediction.CompanyId</td>
+                        <td>@prediction.Date</td>
+                        <td>@prediction.LowPrice</td>
+                        <td>@prediction.HighPrice</td>
+                        <td>@prediction.OpenPrice</td>
+                        <td>@prediction.ClosePrice</td>
+                        <td>@prediction.Volume</td>
 
-@code {
-    private List<Prediction> predictions;
-
-    protected override async Task OnInitializedAsync()
-    {
-        predictions = await Service.GetPredictions();
+                    </tr>
+                }
+            </tbody>
+        </table>
     }
 
+    @code {
+        private List<Prediction> predictions;
 
-}
+        protected override async Task OnInitializedAsync()
+        {
+            predictions = await Service.GetPredictions();
+        }
+
+
+    }

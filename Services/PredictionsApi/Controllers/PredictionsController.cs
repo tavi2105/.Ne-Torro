@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Predictions.Persistence;
+using System.Threading.Tasks;
 
 namespace PredictionsApi.Controllers
 {
@@ -14,15 +15,19 @@ namespace PredictionsApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok( _repository.GetPredictions());
+            var result = await _repository.GetPredictions();
+            if (result == null)
+                return NotFound();
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok(_repository.GetPredictionsById(id));
+            var result = await _repository.GetPredictionsById(id);
+            return Ok(result);
         }
 
     }
