@@ -21,6 +21,7 @@ namespace AccountApi
         {
 
             services.AddControllers();
+            services.AddScoped<IUserRepository, UsersRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AccountApi", Version = "v1" });

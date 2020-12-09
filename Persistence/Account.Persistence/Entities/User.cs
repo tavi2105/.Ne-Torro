@@ -1,4 +1,4 @@
-﻿namespace Account.Persistence
+﻿namespace Account.Persistence.Entities
 {
     public class User
     {   public string FirstName { get; set; }
