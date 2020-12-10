@@ -3,17 +3,18 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Account.Persistence.Entities;
 using Account.Persistence;
+using System.Threading.Tasks;
+
 
 namespace AccountApi.Controllers
 {
-    [Route("/api/acount")]
-    public class AcountController : Controller
+    [Route("/api/account")]
+    public class AccountController : Controller
     {
         private readonly IUserRepository _repository;
 
-        public PredictionsController(IUserRepository repository)
+        public AccountController(IUserRepository repository)
         {
             _repository = repository;
         }
@@ -29,6 +30,17 @@ namespace AccountApi.Controllers
         {
             return await _repository.AddUser(email, password, firstName, lastName, phoneNumber);
         }
+        
+        [HttpPost("UpdateUser{oldEmail, newEmail, password, firstName, lastName, phoneNumber}")]
+        public async Task<IActionResult> UpdateUser(string oldEmail, string newEmail, string password, string firstName, string lastName, string phoneNumber)
+        {
+            return await _repository.UpdateUser(oldEmail, newEmail, password, firstName, lastName, phoneNumber);
+        }
 
+        [HttpPost("RemoveUser{email)")]
+        public async Task<IActionResult> RemoveUser(string email)
+        {
+            return await _repository.RemoveUser(email);
+        }
     }
 }

@@ -8,8 +8,10 @@ namespace Account.Persistence
 {
      public interface IUserRepository
     {      
-        public bool SearchUser(UserDTO user);
-        public string AddUser(UserDTO user);
-        public string LoginUser(UserDTO user);
+        public User SearchUser(string email);
+        public string AddUser(string email, string password, string firstName, string lastName, string phoneNumber);
+        public string LoginUser(string email, string password);
+        public string UpdateUser(string oldEmail, string newEmail, string password, string firstName, string lastName, string phoneNumber);
+        public string RemoveUser(string email);
     }
 }

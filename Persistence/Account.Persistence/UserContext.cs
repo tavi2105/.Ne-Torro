@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Predictions.Persistence.Entities;
+using Account.Persistence.Entities;
 
 namespace Account.Persistence
 {
