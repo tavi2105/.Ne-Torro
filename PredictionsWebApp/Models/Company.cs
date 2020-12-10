@@ -1,4 +1,6 @@
-﻿namespace PredictionsWebApp.Models
+﻿using System.Collections.Generic;
+
+namespace PredictionsWebApp.Models
 {
     public class Company
     {
@@ -7,5 +9,9 @@
         public string Name { get; set; }
 
         public string Description { get; set; }
+
+        public List<Prediction> Predictions { get; set; }
+
+
     }
 }

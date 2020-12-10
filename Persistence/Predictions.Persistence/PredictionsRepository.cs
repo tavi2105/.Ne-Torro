@@ -17,19 +17,19 @@ namespace Predictions.Persistence
         }
         public Task<List<Prediction>>GetPredictions()
         {
-            return _context.Predictions.Take(100).ToListAsync();
+            return _context.Predictions.Include(p => p.Company).Take(500).Distinct().ToListAsync();
         }
-        public Task<Prediction> GetPredictionsById(int id)
+        public Task<List<Prediction>> GetPredictionsById(int id)
         {
-            return _context.Predictions.FindAsync(id).AsTask();
+            return _context.Predictions.Include(p => p.Company).Where( p => p.CompanyId == id).ToListAsync();
         }
         public Task<List<Company>> GetCompanies()
         {
-            return _context.Companies.ToListAsync();
+            return _context.Companies.Include(p => p.Predictions).ToListAsync();
         }
-        public Task<Company> GetCompaniesById(int id)
+        public Task<Company> GetCompanyById(int id)
         {
-            return _context.Companies.FindAsync(id).AsTask();
+            return _context.Companies.Include(p => p.Predictions).FirstOrDefaultAsync(c => c.Id == id);
         }
     }
 }

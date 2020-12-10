@@ -10,8 +10,8 @@ using Predictions.Persistence;
 namespace Predictions.Persistence.Migrations
 {
     [DbContext(typeof(PredictionContext))]
-    [Migration("20201205094614_init-migration")]
-    partial class initmigration
+    [Migration("20201209212036_InitMigration")]
+    partial class InitMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,9 @@ namespace Predictions.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -83,6 +86,8 @@ namespace Predictions.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CompanyId");
+
                     b.ToTable("Predictions");
 
                     b.HasData(
@@ -91,7 +96,7 @@ namespace Predictions.Persistence.Migrations
                             Id = 1,
                             ClosePrice = 110.0,
                             CompanyId = 1,
-                            Date = new DateTime(2020, 12, 5, 11, 46, 13, 756, DateTimeKind.Local).AddTicks(4382),
+                            Date = new DateTime(2020, 12, 9, 23, 20, 35, 905, DateTimeKind.Local).AddTicks(592),
                             HighPrice = 222.0,
                             LowPrice = 33.0,
                             OpenPrice = 100.0,
@@ -102,7 +107,7 @@ namespace Predictions.Persistence.Migrations
                             Id = 2,
                             ClosePrice = 110.0,
                             CompanyId = 2,
-                            Date = new DateTime(2020, 12, 5, 11, 46, 13, 758, DateTimeKind.Local).AddTicks(812),
+                            Date = new DateTime(2020, 12, 9, 23, 20, 35, 906, DateTimeKind.Local).AddTicks(8702),
                             HighPrice = 422.0,
                             LowPrice = 33.0,
                             OpenPrice = 100.0,
@@ -113,12 +118,28 @@ namespace Predictions.Persistence.Migrations
                             Id = 3,
                             ClosePrice = 110.0,
                             CompanyId = 3,
-                            Date = new DateTime(2020, 12, 5, 11, 46, 13, 758, DateTimeKind.Local).AddTicks(839),
+                            Date = new DateTime(2020, 12, 9, 23, 20, 35, 906, DateTimeKind.Local).AddTicks(8743),
                             HighPrice = 5622.0,
                             LowPrice = 100.0,
                             OpenPrice = 100.0,
                             Volume = 5212L
                         });
+                });
+
+            modelBuilder.Entity("Predictions.Persistence.Entities.Prediction", b =>
+                {
+                    b.HasOne("Predictions.Persistence.Entities.Company", "Company")
+                        .WithMany("Predictions")
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Company");
+                });
+
+            modelBuilder.Entity("Predictions.Persistence.Entities.Company", b =>
+                {
+                    b.Navigation("Predictions");
                 });
 #pragma warning restore 612, 618
         }

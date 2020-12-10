@@ -10,6 +10,8 @@ namespace Predictions.Persistence.Entities
 
         public int CompanyId { get; set; }
 
+        public Company Company { get; set; }
+
         public double OpenPrice { get; set; }
 
         public double ClosePrice { get; set; }

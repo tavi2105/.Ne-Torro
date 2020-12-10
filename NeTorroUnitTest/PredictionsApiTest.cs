@@ -4,6 +4,7 @@ using PredictionsApi.Controllers;
 using Xunit;
 using System.Threading.Tasks;
 using Predictions.Persistence;
+using Predictions.Business;
 
 namespace NeTorroUnitTest
 {
@@ -13,7 +14,7 @@ namespace NeTorroUnitTest
         public async Task Get_ReturnsNoFoundResult_GivenModelError()
         {
             // Arrange & Act
-            var mockRepo = new Mock<IPredictionRepository>();
+            var mockRepo = new Mock<IPredictionBusinessLogic>();
             var controller = new PredictionsController(mockRepo.Object);
             controller.ModelState.AddModelError("error", "some error");
 

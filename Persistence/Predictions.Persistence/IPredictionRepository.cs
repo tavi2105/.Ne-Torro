@@ -10,11 +10,11 @@ namespace Predictions.Persistence
     {
         public Task<List<Prediction>> GetPredictions();
 
-        public Task<Prediction> GetPredictionsById(int id);
+        public Task<List<Prediction>> GetPredictionsById(int id);
 
         public Task<List<Company>> GetCompanies();
 
-        public Task<Company> GetCompaniesById(int id);
+        public Task<Company> GetCompanyById(int id);
        
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PredictionsWebApp.Services
 {
-    public class CompanyService
+    public class CompanyService:ICompanyService
     {
         private readonly HttpClient _client;
 
@@ -18,7 +18,7 @@ namespace PredictionsWebApp.Services
         }
      public async Task<List<Company>> GetCompanies()
         {
-            var response = await _client.GetAsync("api/predictions");
+            var response = await _client.GetAsync("api/companies");
             return await response.ReadContentAs<List<Company>>();
         }
 

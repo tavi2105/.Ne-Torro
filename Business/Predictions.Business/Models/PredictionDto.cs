@@ -1,15 +1,17 @@
-﻿using System;
+﻿using Predictions.Persistence;
+using Predictions.Persistence.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace PredictionsWebApp.Models
+namespace Predictions.Business.Models
 {
-    public class Prediction
+   public class PredictionDto
     {
-        public string CompanyName { get; set; }
 
-        public int CompanyId { get; set; }
+        public string CompanyName { get; set; }
 
         public double OpenPrice { get; set; }
 

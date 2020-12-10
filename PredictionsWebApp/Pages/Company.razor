@@ -1,0 +1,16 @@
+﻿@page "/company/{companyObj}"
+<h1>Company</h1>
+
+Welcome to your new app.
+
+
+@code {
+    private Company company { get; set; }
+    [Parameter]
+    public string companyObj { get; set; }
+    protected override void OnParametersSet()
+    {
+        //the param will be set now
+        var company = companyObj;
+    }
+}

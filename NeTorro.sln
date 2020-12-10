@@ -33,7 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{057CCB1E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PredictionsWebApp", "PredictionsWebApp\PredictionsWebApp.csproj", "{670310C3-49A5-44A3-9E7A-FFE804BB0B04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeTorroUnitTest", "NeTorroUnitTest\NeTorroUnitTest.csproj", "{3E0DDB13-90C7-4196-B107-ED6D7D4906D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeTorroUnitTest", "NeTorroUnitTest\NeTorroUnitTest.csproj", "{3E0DDB13-90C7-4196-B107-ED6D7D4906D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
