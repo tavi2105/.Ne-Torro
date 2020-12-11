@@ -16,10 +16,9 @@ namespace NeTorroUnitTest
             // Arrange & Act
             var mockRepo = new Mock<IPredictionBusinessLogic>();
             var controller = new PredictionsController(mockRepo.Object);
-            controller.ModelState.AddModelError("error", "some error");
 
             // Act
-            var result = await controller.GetAll();
+            var result = await controller.GetById(10);
 
             // Assert
             Assert.IsType<Microsoft.AspNetCore.Mvc.NotFoundResult>(result);
