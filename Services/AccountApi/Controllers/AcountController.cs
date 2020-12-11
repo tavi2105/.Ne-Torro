@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Account.Persistence;
 using System.Threading.Tasks;
-
+using Account.Business;
+using Account.Persistence.Entities;
 
 namespace AccountApi.Controllers
 {
@@ -19,28 +20,44 @@ namespace AccountApi.Controllers
             _repository = repository;
         }
 
-        [HttpPost("Login{email,password}")]
-        public async Task<IActionResult> Login(string email, string password)
+        [HttpPost("login")]
+        public  IActionResult Login([FromBody] UserLogin user)
         {
-            return await _repository.LoginUser(email,password);
+           var  result =  _repository.LoginUser(user);
+            return Ok(result);
         }
 
-        [HttpPost("SingIn{email,password,firstName,lastName,phoneNumber}")]
-        public async Task<IActionResult> SingIn(string email, string password, string firstName, string lastName, string phoneNumber)
+        [HttpPost("signin")]
+        public IActionResult SingIn([FromBody] UserDTO user)
         {
-            return await _repository.AddUser(email, password, firstName, lastName, phoneNumber);
+            var result =  _repository.AddUser(user);
+            if (result == "SUCCESS")
+            {
+                return NoContent();
+            }
+            return NotFound();
         }
         
-        [HttpPost("UpdateUser{oldEmail, newEmail, password, firstName, lastName, phoneNumber}")]
-        public async Task<IActionResult> UpdateUser(string oldEmail, string newEmail, string password, string firstName, string lastName, string phoneNumber)
+        [HttpPost]
+        public  IActionResult UpdateUser([FromBody] User user)
         {
-            return await _repository.UpdateUser(oldEmail, newEmail, password, firstName, lastName, phoneNumber);
+            var result = _repository.UpdateUser(user);
+            if (result == "SUCCESS")
+            {
+                return NoContent();
+            }
+            return NotFound();
         }
 
-        [HttpPost("RemoveUser{email)")]
-        public async Task<IActionResult> RemoveUser(string email)
-        {
-            return await _repository.RemoveUser(email);
+        [HttpDelete]
+        public  IActionResult RemoveUser([FromBody] string email)
+        { 
+            var result =  _repository.RemoveUser(email);
+            if (result == "SUCCESS")
+            {
+                return NoContent();
+            }
+            return NotFound();
         }
     }
 }

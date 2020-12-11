@@ -20,20 +20,15 @@ namespace Account.Persistence
             return _context.Users.First(u => u.Email == email);
         }
 
-        public string AddUser(string email, string password, string firstName, string lastName, string phoneNumber)
+        public string AddUser(UserDTO user)
         {
-            User _user = SearchUser(email);
-
+            User _user = SearchUser(user.Email);
+            var maxId = _context.Users.Max(u => u.Id);
+            maxId = maxId + 1;
             if (_user == null)
             {
-                User user = new User();
-                user.Email = email;
-                user.Password = password;
-                user.FirstName = firstName;
-                user.LastName = lastName;
-                user.PhoneNumber = phoneNumber;
-
-                _context.Users.Add(user);
+                var newUser = new User() { Email = user.Email, Id = maxId, Password = user.Password, FirstName = user.FirstName, LastName = user.LastName, PhoneNumber = user.PhoneNumber };
+                _context.Users.Add(newUser);
                 _context.SaveChanges();
                 return "SUCCESS";
             }
@@ -41,13 +36,13 @@ namespace Account.Persistence
             return "AlreadyUser";
         }
 
-        public string LoginUser(string email, string password)
+        public string LoginUser(UserLogin user)
         {
-            User _user = SearchUser(email);
+            User _user = SearchUser(user.Email);
 
             if(_user != null)
             {
-                if(_user.Password == password)
+                if(_user.Password == user.Password)
                 {
                     return "SUCCESS";
                 }
@@ -59,17 +54,17 @@ namespace Account.Persistence
             return "NoUser";
         }
 
-        public string UpdateUser(string oldEmail, string newEmail, string password, string firstName, string lastName, string phoneNumber)
+        public string UpdateUser(User user)
         {
-            User _user = SearchUser(oldEmail);
+            User _user = SearchUser(user.Email);
 
             if(_user != null)
             {
-                _user.Email = newEmail;
-                _user.Password = password;
-                _user.FirstName = firstName;
-                _user.LastName = lastName;
-                _user.PhoneNumber = phoneNumber;
+                _user.Email = user.Email;
+                _user.Password = user.Password;
+                _user.FirstName = user.FirstName;
+                _user.LastName = user.LastName;
+                _user.PhoneNumber = user.PhoneNumber;
 
                 _context.SaveChanges();
 
@@ -92,5 +87,7 @@ namespace Account.Persistence
             else
                 return "Failed";
         }
-   }
+
+       
+    }
 }

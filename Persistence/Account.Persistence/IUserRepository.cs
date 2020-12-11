@@ -9,9 +9,9 @@ namespace Account.Persistence
      public interface IUserRepository
     {      
         public User SearchUser(string email);
-        public string AddUser(string email, string password, string firstName, string lastName, string phoneNumber);
-        public string LoginUser(string email, string password);
-        public string UpdateUser(string oldEmail, string newEmail, string password, string firstName, string lastName, string phoneNumber);
+        public string AddUser(UserDTO user);
+        public string LoginUser(UserLogin  user);
+        public string UpdateUser(User user);
         public string RemoveUser(string email);
     }
 }
