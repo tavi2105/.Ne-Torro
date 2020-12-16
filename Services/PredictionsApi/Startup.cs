@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Predictions.Business;
 using Predictions.Persistence;
 
 namespace PredictionsApi
@@ -22,9 +23,12 @@ namespace PredictionsApi
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("Prediction");
-            services.AddControllers();
+             services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddDbContext<PredictionContext>(opt => opt.UseSqlServer(connectionString));
             services.AddScoped<IPredictionRepository, PredictionsRepository>();
+            services.AddScoped<IPredictionBusinessLogic, PredictionBusinessLogic>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PredictionsApi", Version = "v1" });

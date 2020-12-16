@@ -2,18 +2,19 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Predictions.Persistence
 {
      public interface IPredictionRepository
     {
-        public List<Prediction> GetPredictions();
+        public Task<List<Prediction>> GetPredictions();
 
-        public Prediction GetPredictionsById(int id);
+        public Task<List<Prediction>> GetPredictionsById(int id);
 
-        public List<Company> GetCompanies();
+        public Task<List<Company>> GetCompanies();
 
-        public Company GetCompaniesById(int id);
+        public Task<Company> GetCompanyById(int id);
        
     }
 }

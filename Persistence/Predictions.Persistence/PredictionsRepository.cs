@@ -1,8 +1,10 @@
-﻿using Predictions.Persistence.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Predictions.Persistence.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Predictions.Persistence
 {
@@ -13,21 +15,21 @@ namespace Predictions.Persistence
         {
             _context = context;
         }
-        public List<Prediction> GetPredictions()
+        public Task<List<Prediction>>GetPredictions()
         {
-            return _context.Predictions.ToList();
+            return _context.Predictions.Include(p => p.Company).Take(500).Distinct().ToListAsync();
         }
-        public Prediction GetPredictionsById(int id)
+        public Task<List<Prediction>> GetPredictionsById(int id)
         {
-            return _context.Predictions.Find(id);
+            return _context.Predictions.Include(p => p.Company).Where( p => p.CompanyId == id).ToListAsync();
         }
-        public List<Company> GetCompanies()
+        public Task<List<Company>> GetCompanies()
         {
-            return _context.Companies.ToList();
+            return _context.Companies.Include(p => p.Predictions).ToListAsync();
         }
-        public Company GetCompaniesById(int id)
+        public Task<Company> GetCompanyById(int id)
         {
-            return _context.Companies.Find(id);
+            return _context.Companies.Include(p => p.Predictions).FirstOrDefaultAsync(c => c.Id == id);
         }
     }
 }

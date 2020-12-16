@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Account.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace AccountApi
 {
@@ -25,6 +27,11 @@ namespace AccountApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AccountApi", Version = "v1" });
             });
+            var connectionString = Configuration.GetConnectionString("Account");
+
+            services.AddDbContext<UserContext>(opt => opt.UseSqlServer(connectionString));
+            services.AddScoped<IUserRepository, UsersRepository>();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,59 @@
+﻿@page "/predictions"
+@using Services
+@using Models
+@inject IPredictionService PredictionService
+@inject NavigationManager NavManager
+
+
+<h1>Company stock price predictions</h1>
+
+@if (predictions == null)
+{
+    <p><em>Loading predictions...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CompanyName</th>
+                <th>Date</th>
+                <th>LowPrice</th>
+                <th>HighPrice</th>
+                <th>OpenPrice</th>
+                <th>ClosePrice</th>
+                <th>Volume</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var prediction in predictions)
+            {
+                <tr>
+                    <td><a href="# ">@prediction.CompanyName</a></td>
+                    <td>@prediction.Date</td>
+                    <td>@prediction.LowPrice</td>
+                    <td>@prediction.HighPrice</td>
+                    <td>@prediction.OpenPrice</td>
+                    <td>@prediction.ClosePrice</td>
+                    <td>@prediction.Volume</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Prediction> predictions;
+
+    protected override async Task OnInitializedAsync()
+    {
+        predictions = await PredictionService.GetPredictions();
+    }
+
+    public void Navigate()
+    {
+        NavManager.NavigateTo("/company");
+    }
+}

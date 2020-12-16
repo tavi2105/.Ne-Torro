@@ -11,6 +11,7 @@ namespace Predictions.Persistence
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Prediction>().HasOne(p => p.Company).WithMany( p => p.Predictions).HasForeignKey(p => p.CompanyId);
             modelBuilder.Seed();
             base.OnModelCreating(modelBuilder);
         }
