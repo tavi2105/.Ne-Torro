@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BudgdetEconomy.Persistence
+namespace FinancialStatement.Persistence
 {
-    class BudgetEconomyContext:DbContext
+   public class FinancialStatementContext:DbContext
     {
-        public BudgetEconomyContext(DbContextOptions options) : base(options)
+        public FinancialStatementContext(DbContextOptions options) : base(options)
         {
 
         }
@@ -18,7 +18,7 @@ namespace BudgdetEconomy.Persistence
            // modelBuilder.Seed();
             base.OnModelCreating(modelBuilder);
         }
-        public DbSet<Economy> Economies { get; set; }
+        public DbSet<FinancialStatement> FinancialStatements { get; set; }
 
     }
 }

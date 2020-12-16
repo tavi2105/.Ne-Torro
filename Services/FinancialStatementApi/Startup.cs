@@ -1,9 +1,14 @@
+using AutoMapper;
+using FinancialStatement.Business;
+using FinancialStatement.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 namespace EconomyBudgetApi
 {
@@ -19,8 +24,12 @@ namespace EconomyBudgetApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            string connectionString = Configuration.GetConnectionString("Finances");
             services.AddControllers();
+            services.AddDbContext<FinancialStatementContext>(opt => opt.UseSqlServer(connectionString));
+            services.AddScoped<IFinancialStatementRepository, FinancialStatementRepository>();
+            services.AddScoped<IFinancialStatementBusinessLogic, FinancialStatementBusinessLogic>();
+            services.AddAutoMapper(Assembly.GetAssembly(typeof(BusinessLayer)));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EconomyBudgetApi", Version = "v1" });
@@ -36,6 +45,7 @@ namespace EconomyBudgetApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EconomyBudgetApi v1"));
             }
+
 
             app.UseHttpsRedirection();
 

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PredictionsApi.Controllers
 {
-    [Route("/api/predictions")]
+    [Route("/api/v1/predictions")]
     public class PredictionsController : Controller
     {
         private readonly IPredictionBusinessLogic _businessLogic;

@@ -27,8 +27,8 @@ namespace AccountApi.Controllers
             return Ok(result);
         }
 
-        [HttpPost("signin")]
-        public IActionResult SingIn([FromBody] UserDTO user)
+        [HttpPost("register")]
+        public IActionResult Register([FromBody] UserDTO user)
         {
             var result =  _repository.AddUser(user);
             if (result == "SUCCESS")

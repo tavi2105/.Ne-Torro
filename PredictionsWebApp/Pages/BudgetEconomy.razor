@@ -1,11 +1,11 @@
 ﻿@page "/fetchdata"
 @inject HttpClient Http
 
-<h1>Economies</h1>
+<h1>Financial State</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>Financial History</p>
 
-@if (forecasts == null)
+@if (finances == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -14,42 +14,41 @@ else
     <table class="table">
         <thead>
             <tr>
+                <th>Income</th>
+                <th>Expense</th>
                 <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var finance in finances)
             {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
+            <tr>
+                <td>@finance.Income</td>
+                <td>@finance.Expense</td>
+                <td>@finance.Date.ToShortDateString()</td>
+                <td><button>edit</button></td>
+            </tr>
             }
         </tbody>
     </table>
 }
 
 @code {
-    private WeatherForecast[] forecasts;
+    private Finance[] finances;
 
     protected override async Task OnInitializedAsync()
     {
-       // forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        finances = await Http.GetFromJsonAsync<Finance[]>("sample-data/weather.json");
     }
 
-    public class WeatherForecast
+    public class Finance
     {
         public DateTime Date { get; set; }
 
-        public int TemperatureC { get; set; }
+        public int Income { get; set; }
 
-        public string Summary { get; set; }
+        public string Expense { get; set; }
 
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
 }
