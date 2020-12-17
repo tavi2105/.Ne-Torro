@@ -1,5 +1,7 @@
-﻿@page "/fetchdata"
-@inject HttpClient Http
+﻿@page "/finances"
+@using Services
+@using Models 
+@inject IFinanceService FinanceService
 
 <h1>Financial State</h1>
 
@@ -23,32 +25,22 @@ else
         <tbody>
             @foreach (var finance in finances)
             {
-            <tr>
-                <td>@finance.Income</td>
-                <td>@finance.Expense</td>
-                <td>@finance.Date.ToShortDateString()</td>
-                <td><button>edit</button></td>
-            </tr>
+                <tr>
+                    <td>@finance.Income</td>
+                    <td>@finance.Expense</td>
+                    <td>@finance.Date.ToShortDateString()</td>
+                    <td><button>edit</button></td>
+                </tr>
             }
         </tbody>
     </table>
 }
 
 @code {
-    private Finance[] finances;
+    private List<FinancialStatement.Models.Finance> finances;
 
     protected override async Task OnInitializedAsync()
     {
-        finances = await Http.GetFromJsonAsync<Finance[]>("sample-data/weather.json");
-    }
-
-    public class Finance
-    {
-        public DateTime Date { get; set; }
-
-        public int Income { get; set; }
-
-        public string Expense { get; set; }
-
+        finances = await FinanceService.GetFinancialStatement();
     }
 }
