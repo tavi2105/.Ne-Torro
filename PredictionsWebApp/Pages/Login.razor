@@ -1,10 +1,9 @@
 ﻿@page "/Login"
 @using Models
-
-<EditForm Model="@user" OnValidSubmit="@OnValidSubmit" class="" style= "        background-color: #007bff
-">
+<h1>Login</h1>
+<EditForm Model="@user" OnValidSubmit="@OnValidSubmit" >
     <DataAnnotationsValidator />
-    <div class="form-group">
+    <div class="form-group ">
         <label>Email :</label>
         <div>
             <InputText @bind-Value="@user.Email" class="form-control col-sm-5" />
