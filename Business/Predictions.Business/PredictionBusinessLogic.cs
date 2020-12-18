@@ -22,10 +22,10 @@ namespace Predictions.Business
             var predictions = await _repository.GetPredictions();
             return MapPredictionsToDtos(predictions);
         }
-        public  Task<List<Prediction>> GetPredictionDtosForCompany(int idCompany)
+        public async Task<List<PredictionDto>> GetPredictionDtosForCompany(int idCompany)
         {
-            var predictions = _repository.GetPredictionsById(idCompany);
-            return predictions;
+            var predictions = await _repository.GetPredictionsById(idCompany);
+            return MapPredictionsToDtos(predictions);
         }
         public async Task<CompanyPredictionsDto> GetCompanyPredictions(int id)
         {
