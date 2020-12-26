@@ -12,7 +12,7 @@ namespace Account.Persistence
         }
         public User SearchUser(string email)
         {
-            return _context.Users.First(u => u.Email == email);
+            return _context.Users.FirstOrDefault(u => u.Email == email);
         }
 
         public string AddUser(UserDTO user)
@@ -22,7 +22,7 @@ namespace Account.Persistence
             maxId = maxId + 1;
             if (_user == null)
             {
-                var newUser = new User() { Email = user.Email, Id = maxId, Password = user.Password, FirstName = user.FirstName, LastName = user.LastName, PhoneNumber = user.PhoneNumber };
+                var newUser = new User() { Email = user.Email, Password = user.Password, FirstName = user.FirstName, LastName = user.LastName, PhoneNumber = user.PhoneNumber };
                 _context.Users.Add(newUser);
                 _context.SaveChanges();
                 return "SUCCESS";
@@ -77,6 +77,7 @@ namespace Account.Persistence
             if(_user != null)
             {
                 _context.Users.Remove(_user);
+                _context.SaveChanges();
                 return "Success";
             }
             else

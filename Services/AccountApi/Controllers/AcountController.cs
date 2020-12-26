@@ -47,7 +47,7 @@ namespace AccountApi.Controllers
         public  IActionResult RemoveUser([FromBody] string email)
         { 
             var result =  _repository.RemoveUser(email);
-            if (result == "SUCCESS")
+            if (result == "Success")
             {
                 return NoContent();
             }
