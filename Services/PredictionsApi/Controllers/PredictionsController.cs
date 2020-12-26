@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Predictions.Business;
-using Predictions.Persistence;
 using System.Threading.Tasks;
 
 namespace PredictionsApi.Controllers

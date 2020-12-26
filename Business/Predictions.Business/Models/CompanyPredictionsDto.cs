@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Predictions.Business.Models
 {
-   public class CompanyPredictionsDto
+    public class CompanyPredictionsDto
     {
         public string CompanyName { get; set; }
 

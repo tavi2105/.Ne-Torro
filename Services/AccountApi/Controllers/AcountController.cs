@@ -1,11 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Account.Persistence;
-using System.Threading.Tasks;
-using Account.Business;
 using Account.Persistence.Entities;
 
 namespace AccountApi.Controllers

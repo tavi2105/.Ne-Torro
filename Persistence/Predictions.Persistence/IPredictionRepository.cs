@@ -1,12 +1,10 @@
 ﻿using Predictions.Persistence.Entities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Predictions.Persistence
 {
-     public interface IPredictionRepository
+    public interface IPredictionRepository
     {
         public Task<List<Prediction>> GetPredictions();
 

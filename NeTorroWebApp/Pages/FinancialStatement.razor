@@ -1,0 +1,45 @@
+﻿@page "/finances"
+@using Services
+@using Models 
+@inject IFinanceService FinanceService
+
+<h1>Financial State</h1>
+
+<p>Financial History</p>
+
+@if (finances == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Income</th>
+                <th>Expense</th>
+                <th>Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var finance in finances)
+            {
+                <tr>
+                    <td>@finance.Income</td>
+                    <td>@finance.Expense</td>
+                    <td>@finance.Date.ToShortDateString()</td>
+                    <td><button>edit</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Finance> finances;
+
+    protected override async Task OnInitializedAsync()
+    {
+        finances = await FinanceService.GetFinancialStatement();   }
+}

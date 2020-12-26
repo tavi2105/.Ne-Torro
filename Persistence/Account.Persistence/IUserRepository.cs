@@ -1,12 +1,8 @@
 ﻿using Account.Persistence.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Account.Persistence
 {
-     public interface IUserRepository
+    public interface IUserRepository
     {      
         public User SearchUser(string email);
         public string AddUser(UserDTO user);

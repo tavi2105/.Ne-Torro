@@ -3,7 +3,6 @@ using Moq;
 using Predictions.Business.Models;
 using Predictions.Persistence;
 using Predictions.Persistence.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

@@ -1,7 +1,6 @@
 using Moq;
 using Predictions.Business;
 using PredictionsApi.Controllers;
-using System;
 using System.Threading.Tasks;
 using Xunit;
 

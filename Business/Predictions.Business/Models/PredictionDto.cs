@@ -1,14 +1,8 @@
-﻿using Predictions.Persistence;
-using Predictions.Persistence.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace Predictions.Business.Models
 {
-   public class PredictionDto
+    public class PredictionDto
     {
 
         public string CompanyName { get; set; }

@@ -1,14 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Account.Persistence.Entities;
-using System;
-using System.Collections.Generic;
+﻿using Account.Persistence.Entities;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Account.Persistence
 {
-   public class UsersRepository: IUserRepository
+    public class UsersRepository: IUserRepository
    {
         private readonly UserContext _context;
         public UsersRepository(UserContext context)

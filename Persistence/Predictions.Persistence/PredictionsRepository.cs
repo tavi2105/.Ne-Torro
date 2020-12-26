@@ -1,14 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Predictions.Persistence.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Predictions.Persistence
 {
-   public class PredictionsRepository: IPredictionRepository
+    public class PredictionsRepository: IPredictionRepository
     {
         private readonly PredictionContext _context;
         public PredictionsRepository(PredictionContext context)

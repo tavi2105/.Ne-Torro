@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace FinancialStatement.Business
 {
-   public interface IFinancialStatementBusinessLogic
+    public interface IFinancialStatementBusinessLogic
     {
         public Task<FinancialStatementDto> GetById(int id);
         
