@@ -2,18 +2,18 @@
 using Predictions.Business;
 using Predictions.Persistence;
 using System.Threading.Tasks;
+using PredictionsApi.DataModels;
+using Microsoft.Extensions.ML;
+using System;
+
 
 namespace PredictionsApi.Controllers
 {
-    [Route("/api/predictions")]
-    public class PredictionsController : Controller
+    [Route("/api/v2/predictions")]
+    public class PredictionsController : ControllerBase
     {
-        private readonly IPredictionBusinessLogic _businessLogic;
 
-        public PredictionsController(IPredictionBusinessLogic businessLogic)
-        {
-            _businessLogic = businessLogic;
-        }
+        private readonly IPredictionBusinessLogic _businessLogic;
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -31,6 +31,31 @@ namespace PredictionsApi.Controllers
             return Ok(result);
         }
 
+        private readonly PredictionEnginePool<PredictionData, DataPredictions> _predictionEnginePool;
 
+        
+        public PredictionsController(PredictionEnginePool<PredictionData, DataPredictions> predictionEnginePool, IPredictionBusinessLogic businessLogic)
+        {
+            _businessLogic = businessLogic;
+            _predictionEnginePool = predictionEnginePool;
+        }
+
+        [HttpPost]
+        public ActionResult<string> Post([FromBody] PredictionData input)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            DataPredictions prediction = _predictionEnginePool.Predict(modelName: "StockPrediction_trainML", example: input);
+
+            float predictedData = prediction.Score;
+            float predictedProbability = prediction.Probability;
+
+            Console.WriteLine(predictedData);
+            Console.WriteLine(predictedProbability);
+            return Ok(predictedProbability);
+        }
     }
 }
