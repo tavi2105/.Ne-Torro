@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Predictions.Persistence.Migrations
 {
-    public partial class InitMigration : Migration
+    public partial class migration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -49,32 +49,32 @@ namespace Predictions.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "Companies",
                 columns: new[] { "Id", "Description", "Name" },
-                values: new object[] { 1, null, "Centric" });
+                values: new object[] { 1, "Planeta", "Centric" });
 
             migrationBuilder.InsertData(
                 table: "Companies",
                 columns: new[] { "Id", "Description", "Name" },
-                values: new object[] { 2, null, "Ness" });
+                values: new object[] { 2, "Planeta", "Ness" });
 
             migrationBuilder.InsertData(
                 table: "Companies",
                 columns: new[] { "Id", "Description", "Name" },
-                values: new object[] { 3, null, "Endava" });
+                values: new object[] { 3, "Planeta", "Endava" });
 
             migrationBuilder.InsertData(
                 table: "Predictions",
                 columns: new[] { "Id", "ClosePrice", "CompanyId", "Date", "HighPrice", "LowPrice", "OpenPrice", "Volume" },
-                values: new object[] { 1, 110.0, 1, new DateTime(2020, 12, 9, 23, 20, 35, 905, DateTimeKind.Local).AddTicks(592), 222.0, 33.0, 100.0, 2323L });
+                values: new object[] { 1, 110.0, 1, new DateTime(2020, 12, 26, 15, 3, 48, 50, DateTimeKind.Local).AddTicks(2291), 222.0, 33.0, 100.0, 2323L });
 
             migrationBuilder.InsertData(
                 table: "Predictions",
                 columns: new[] { "Id", "ClosePrice", "CompanyId", "Date", "HighPrice", "LowPrice", "OpenPrice", "Volume" },
-                values: new object[] { 2, 110.0, 2, new DateTime(2020, 12, 9, 23, 20, 35, 906, DateTimeKind.Local).AddTicks(8702), 422.0, 33.0, 100.0, 4321L });
+                values: new object[] { 2, 110.0, 2, new DateTime(2020, 12, 26, 15, 3, 48, 53, DateTimeKind.Local).AddTicks(4129), 422.0, 33.0, 100.0, 4321L });
 
             migrationBuilder.InsertData(
                 table: "Predictions",
                 columns: new[] { "Id", "ClosePrice", "CompanyId", "Date", "HighPrice", "LowPrice", "OpenPrice", "Volume" },
-                values: new object[] { 3, 110.0, 3, new DateTime(2020, 12, 9, 23, 20, 35, 906, DateTimeKind.Local).AddTicks(8743), 5622.0, 100.0, 100.0, 5212L });
+                values: new object[] { 3, 110.0, 3, new DateTime(2020, 12, 26, 15, 3, 48, 53, DateTimeKind.Local).AddTicks(4277), 5622.0, 100.0, 100.0, 5212L });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Predictions_CompanyId",

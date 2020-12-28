@@ -40,16 +40,19 @@ namespace Predictions.Persistence.Migrations
                         new
                         {
                             Id = 1,
+                            Description = "Planeta",
                             Name = "Centric"
                         },
                         new
                         {
                             Id = 2,
+                            Description = "Planeta",
                             Name = "Ness"
                         },
                         new
                         {
                             Id = 3,
+                            Description = "Planeta",
                             Name = "Endava"
                         });
                 });
@@ -94,7 +97,7 @@ namespace Predictions.Persistence.Migrations
                             Id = 1,
                             ClosePrice = 110.0,
                             CompanyId = 1,
-                            Date = new DateTime(2020, 12, 9, 23, 20, 35, 905, DateTimeKind.Local).AddTicks(592),
+                            Date = new DateTime(2020, 12, 26, 15, 3, 48, 50, DateTimeKind.Local).AddTicks(2291),
                             HighPrice = 222.0,
                             LowPrice = 33.0,
                             OpenPrice = 100.0,
@@ -105,7 +108,7 @@ namespace Predictions.Persistence.Migrations
                             Id = 2,
                             ClosePrice = 110.0,
                             CompanyId = 2,
-                            Date = new DateTime(2020, 12, 9, 23, 20, 35, 906, DateTimeKind.Local).AddTicks(8702),
+                            Date = new DateTime(2020, 12, 26, 15, 3, 48, 53, DateTimeKind.Local).AddTicks(4129),
                             HighPrice = 422.0,
                             LowPrice = 33.0,
                             OpenPrice = 100.0,
@@ -116,7 +119,7 @@ namespace Predictions.Persistence.Migrations
                             Id = 3,
                             ClosePrice = 110.0,
                             CompanyId = 3,
-                            Date = new DateTime(2020, 12, 9, 23, 20, 35, 906, DateTimeKind.Local).AddTicks(8743),
+                            Date = new DateTime(2020, 12, 26, 15, 3, 48, 53, DateTimeKind.Local).AddTicks(4277),
                             HighPrice = 5622.0,
                             LowPrice = 100.0,
                             OpenPrice = 100.0,

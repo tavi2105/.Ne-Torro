@@ -14,6 +14,7 @@ namespace PredictionsApi.Controllers
     {
 
         private readonly IPredictionBusinessLogic _businessLogic;
+        private readonly PredictionEnginePool<PredictionData, DataPredictions> _predictionEnginePool;
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -31,9 +32,6 @@ namespace PredictionsApi.Controllers
             return Ok(result);
         }
 
-        private readonly PredictionEnginePool<PredictionData, DataPredictions> _predictionEnginePool;
-
-        
         public PredictionsController(PredictionEnginePool<PredictionData, DataPredictions> predictionEnginePool, IPredictionBusinessLogic businessLogic)
         {
             _businessLogic = businessLogic;
@@ -51,11 +49,9 @@ namespace PredictionsApi.Controllers
             DataPredictions prediction = _predictionEnginePool.Predict(modelName: "StockPrediction_trainML", example: input);
 
             float predictedData = prediction.Score;
-            float predictedProbability = prediction.Probability;
 
             Console.WriteLine(predictedData);
-            Console.WriteLine(predictedProbability);
-            return Ok(predictedProbability);
+            return Ok(predictedData);
         }
     }
 }
