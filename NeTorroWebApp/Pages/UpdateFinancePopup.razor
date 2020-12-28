@@ -1,0 +1,42 @@
+﻿@using Services
+@using Models
+@inject IFinanceService FinanceService
+
+<EditForm Model="@Finance" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <label for="Income">Income</label>
+        <InputNumber id="Income" class="form-control" @bind-Value="Finance.Income" />
+    </div>
+    <div class="form-group">
+        <label for="Expense">Expense</label>
+        <InputNumber id="Expense" class="form-control" @bind-Value="Finance.Expense" />
+    </div>
+    <div class="form-group">
+        <label for="Date">Date </label>
+        <InputDate id="Date" class="form-control" @bind-Value="Finance.Date" />
+    </div>
+    <div class="container btn-group">
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary ">Centered button</button>
+            </div>
+        </div>
+    </div>
+</EditForm>
+@code {
+    private Finance Finance = new Finance();
+    [CascadingParameter] BlazoredModalInstance ModalInstance { get; set; }
+    [Parameter] public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Finance =await FinanceService.GetFinancialStatementById(Id);
+    }
+    private void HandleValidSubmit()
+    {
+        FinanceService.UpdateFinancialStatement(Finance);
+        ModalInstance.Close(ModalResult.Ok<Finance>(Finance));
+    }
+}

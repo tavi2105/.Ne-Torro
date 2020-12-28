@@ -47,16 +47,16 @@ namespace FinancialStatementApi.Controllers
             return NoContent();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] FinancialStatementDto financialStatementDto)
+        [HttpPost("{id}")]
+        public async Task<IActionResult> Create([FromBody] FinancialStatementForCreateDto financialStatementDto,int id)
         {
            
             await _businessLogic.Create(financialStatementDto);
             return StatusCode(201);
 
         }
-
-        [HttpPut("id")]
+        
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromBody] FinancialStatementDto financialStatementDto)
         {
             var financial = await _businessLogic.GetById(financialStatementDto.Id);

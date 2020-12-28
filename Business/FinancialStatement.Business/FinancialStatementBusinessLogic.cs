@@ -15,11 +15,6 @@ namespace FinancialStatement.Business
             _repository = repository;
             _mapper = mapper;
         }
-        public Task Create(FinancialStatementDto financialStatement)
-        {
-            var entity = _mapper.Map<Persistence.FinancialStatement>(financialStatement);
-            return _repository.Create(entity);
-        }
 
         public Task Delete(int id)
         {
@@ -56,5 +51,13 @@ namespace FinancialStatement.Business
           var entity =  _mapper.Map<Persistence.FinancialStatement>(financialStatement);
             return _repository.Update(entity);
         }
+        public Task Create(FinancialStatementForCreateDto financialStatement)
+        {
+            var entity = _mapper.Map<Persistence.FinancialStatement>(financialStatement);
+            entity.UserId = 2;
+            return _repository.Create(entity);
+        }
+
+      
     }
 }

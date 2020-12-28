@@ -7,7 +7,11 @@ namespace FinancialStatement.Business
         public FinancialStatementProfile()
         {
             CreateMap<Persistence.FinancialStatement, FinancialStatementDto>();
-            CreateMap<FinancialStatementDto, Persistence.FinancialStatement>().ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.Id));
+            CreateMap<FinancialStatementDto, Persistence.FinancialStatement>()
+                .ForMember(dest => dest.UserId, opt => opt.Ignore());
+            CreateMap<FinancialStatementForCreateDto, Persistence.FinancialStatement>()
+                .ForMember(dest => dest.UserId, opt => opt.Ignore())
+                .ForMember(dest => dest.Id, opt => opt.Ignore());
 
         }
     }

@@ -1,11 +1,19 @@
 ﻿@page "/finances"
 @using Services
-@using Models 
+@using Models
 @inject IFinanceService FinanceService
+@inject IModalService Modal
+
 
 <h1>Financial State</h1>
 
 <p>Financial History</p>
+@if (IsModalClosed)
+{
+    <button class="btn btn-primary" @onclick="@ShowAddPopup"> Add</button>
+    <br />
+}
+
 
 @if (finances == null)
 {
@@ -20,6 +28,7 @@ else
                 <th>Expense</th>
                 <th>Date</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +38,9 @@ else
                     <td>@finance.Income</td>
                     <td>@finance.Expense</td>
                     <td>@finance.Date.ToShortDateString()</td>
-                    <td><button>edit</button></td>
+                    <td><button class=" btn btn-primary" @onclick="@(()=>ShowEditPopup(finance.Id))">Edit</button></td>
+                    <td><button class=" btn btn-primary" @onclick="@(()=>DeleteResource(finance.Id))">Delete</button></td>
+
                 </tr>
             }
         </tbody>
@@ -38,8 +49,43 @@ else
 
 @code {
     private List<Finance> finances;
-
+    private bool IsModalClosed = true;
     protected override async Task OnInitializedAsync()
     {
-        finances = await FinanceService.GetFinancialStatement();   }
+        finances = await FinanceService.GetFinancialStatement();
+    }
+    private async Task ShowAddPopup()
+    {
+        if (IsModalClosed)
+        {
+            var modal = Modal.Show<CreateFinancePopup>("Add Finance");
+            IsModalClosed = false;
+            var result = await modal.Result;
+            finances = await FinanceService.GetFinancialStatement();
+            IsModalClosed = true;
+        }
+    }
+
+    private async Task ShowEditPopup(int id)
+    {
+
+        if (IsModalClosed)
+        {
+            var parameters = new ModalParameters();
+            parameters.Add(nameof(Finance.Id), id);
+
+            var modal = Modal.Show<UpdateFinancePopup>("Update Finance", parameters);
+            IsModalClosed = false;
+            var result = await modal.Result;
+            finances = await FinanceService.GetFinancialStatement();
+            IsModalClosed = true;
+        }
+    }
+
+    private void DeleteResource(int id)
+    {
+        FinanceService.DeleteFinancialStatement(id);
+        finances.RemoveAll(r => r.Id == id);
+    }
+
 }

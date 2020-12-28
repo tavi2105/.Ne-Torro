@@ -11,7 +11,7 @@ namespace FinancialStatement.Business
         
         public Task Update(FinancialStatementDto financialStatement);
 
-        public Task Create(FinancialStatementDto financialStatement);
+        public Task Create(FinancialStatementForCreateDto financialStatement);
 
         public Task<List<FinancialStatementDto>> GetByUserId(int id);
 
