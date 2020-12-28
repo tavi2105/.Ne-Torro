@@ -14,10 +14,15 @@ namespace NeTorroWebApp.Services
         {
             _client = client;
         }
-     public async Task<List<Company>> GetCompanies()
+    public async Task<List<Company>> GetCompanies()
         {
             var response = await _client.GetAsync("api/companies");
             return await response.ReadContentAs<List<Company>>();
+        }
+    public async Task<Company> GetCompany(int id)
+        {
+            var response = await _client.GetAsync("api/companies/" +id);
+            return await response.ReadContentAs<Company>();
         }
 
     }

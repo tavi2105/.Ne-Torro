@@ -30,7 +30,7 @@ else
             @foreach (var prediction in predictions)
             {
                 <tr>
-                    <td><a href="# ">@prediction.CompanyName</a></td>
+                    <td class="text-primary" style="cursor:pointer" @onclick="@(() => NavigateToCompany(prediction.CompanyId))">@prediction.CompanyName</td>
                     <td>@prediction.Date</td>
                     <td>@prediction.LowPrice</td>
                     <td>@prediction.HighPrice</td>
@@ -52,8 +52,8 @@ else
         predictions = await PredictionService.GetPredictions();
     }
 
-    public void Navigate()
+    public void NavigateToCompany(int id)
     {
-        NavManager.NavigateTo("/company");
+        NavManager.NavigateTo("/company/" + id);
     }
 }

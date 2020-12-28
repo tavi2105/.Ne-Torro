@@ -51,6 +51,7 @@ namespace Predictions.Business
                 {
                     ClosePrice = prediction.ClosePrice,
                     CompanyName = prediction.Company.Name,
+                    CompanyId = prediction.CompanyId,
                     Date = prediction.Date,
                     HighPrice = prediction.HighPrice,
                     LowPrice = prediction.LowPrice,

@@ -4,6 +4,7 @@ namespace Predictions.Business.Models
 {
     public class PredictionDto
     {
+        public int CompanyId { get; set; }
 
         public string CompanyName { get; set; }
 
