@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Account.Persistence;
 using Account.Persistence.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AccountApi.Controllers
 {
@@ -15,6 +16,7 @@ namespace AccountApi.Controllers
         }
 
         [HttpPost("login")]
+        [BasicAuthentication]
         public  IActionResult Login([FromBody] UserLogin user)
         {
            var  result =  _repository.LoginUser(user);
@@ -33,7 +35,8 @@ namespace AccountApi.Controllers
         }
         
         [HttpPost]
-        public  IActionResult UpdateUser([FromBody] User user)
+        [Authorize(Roles = "Administrator")]
+        public IActionResult UpdateUser([FromBody] User user)
         {
             var result = _repository.UpdateUser(user);
             if (result == "SUCCESS")
@@ -44,7 +47,8 @@ namespace AccountApi.Controllers
         }
 
         [HttpDelete]
-        public  IActionResult RemoveUser([FromBody] string email)
+        [Authorize(Roles = "Administrator")]
+        public IActionResult RemoveUser([FromBody] string email)
         { 
             var result =  _repository.RemoveUser(email);
             if (result == "Success")
