@@ -1,0 +1,524 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Blazored.Modal/5.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6",
+          "Microsoft.JSInterop.WebAssembly": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazored.Modal.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazored.Modal.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazored.Modal.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazored.Modal.props": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authorization/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "3.1.6",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Options": "3.1.6"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "3.1.6",
+          "Microsoft.AspNetCore.Components.Analyzers": "3.1.6",
+          "Microsoft.JSInterop": "3.1.6"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/3.1.6": {
+        "type": "package",
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Forms/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Web/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Forms": "3.1.6",
+          "Microsoft.Extensions.DependencyInjection": "3.1.6",
+          "Microsoft.JSInterop": "3.1.6"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6",
+          "Microsoft.Extensions.Primitives": "3.1.6"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Options.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Options.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "Microsoft.JSInterop/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.JSInterop.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.JSInterop.dll": {}
+        }
+      },
+      "Microsoft.JSInterop.WebAssembly/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.JSInterop": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Microsoft.JSInterop.WebAssembly.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.JSInterop.WebAssembly.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Blazored.Modal/5.1.0": {
+      "sha512": "Sw2pWqDWugPFf4BKmO2Cd8SZ4nQluIvgrcINuAFQrCRLoaY1+dp6gGbtEvenLc6pgjyD7TX4eg7qnU4LSpVN6A==",
+      "type": "package",
+      "path": "blazored.modal/5.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.modal.5.1.0.nupkg.sha512",
+        "blazored.modal.nuspec",
+        "build/Blazored.Modal.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazored.Modal.props",
+        "buildTransitive/Blazored.Modal.props",
+        "icon.png",
+        "lib/netstandard2.1/Blazored.Modal.dll",
+        "staticwebassets/blazored-modal.css",
+        "staticwebassets/blazored.modal.js"
+      ]
+    },
+    "Microsoft.AspNetCore.Authorization/3.1.6": {
+      "sha512": "n0EC0W8jRpM2o1sKKYQpFuvE1sgW7juyEbhVZPcHy9VnHyZYvcIBHVJ6aPCtwqf/16KyqIB1XDVjPnPgyui47Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authorization/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authorization.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
+        "microsoft.aspnetcore.authorization.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components/3.1.6": {
+      "sha512": "mNBFDx5rbm5IHpMymGuDo9iGf9L4JWwE0Ho4wXQOdJRKhk7DhuebbIgWFcshsEmDqZPuaX1B4PkifJNDq/3KCw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Components.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Components.xml",
+        "microsoft.aspnetcore.components.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.components.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/3.1.6": {
+      "sha512": "uX+Dl3uPqlGmKBmQRn9QKfx0cgXXyfr9JF8aaBKgi+mexwyGEYFTMXleb9AHK9aofwwMivwfUHi/OmxgcB4YYw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.analyzers/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
+        "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "microsoft.aspnetcore.components.analyzers.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Forms/3.1.6": {
+      "sha512": "ypqYTvv478N19dRTXsELjluHyW+/aASauBdLvVL4zbmA5BMMdQy69LKTcXXfgqhzC1N/KYusPoMPCasD1F7Fwg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.forms/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Forms.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Forms.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Forms.xml",
+        "microsoft.aspnetcore.components.forms.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Web/3.1.6": {
+      "sha512": "u6xnpxIHf20aiJ+B2iyZKzsisc2aMkKV2JI/wRWov0M/6FLqLwtOsjRidtOAd5g3eJLYxE6fxOOC8KQqbYNjog==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.web/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Components.Web.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Components.Web.xml",
+        "microsoft.aspnetcore.components.web.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Metadata/3.1.6": {
+      "sha512": "CPD6ukxTPpvtm5GfAlgRbUPF7D+eo8K7rMVgL/kLrz4aTT6gb/c0uet2ISRIO615zIS2N52ZZwLcX9hmeQhVGg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.metadata/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Metadata.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
+        "microsoft.aspnetcore.metadata.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/3.1.6": {
+      "sha512": "YMJWflBmBc0PbqYvt3m4ueSCgV51JLfqHhyunoVq0rBs9V4sVQw5JsPTB17bIrlHFJs2pt2olgfavOOvuGwoRg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.3.1.6.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+      "sha512": "JVlypPjlPqOEyAhET6pA7TqrK+Ya8TrYe2vvqsp62TYKS87oNuReoS7XpDFW0rrOsQo66G1yYf3K0E+lJHFHuw==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/3.1.6": {
+      "sha512": "o2XYIjF9UugupEPvFsc9N8SjevixoRznS0V6EtjUZcGV4EjXXWKUXlKKsIWmD3i4dSiGo82aNcyqfQTsF/8h8g==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.3.1.6.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Options/3.1.6": {
+      "sha512": "6nBkdL9UxCfA8eDuFBZVYAYpJhux0a6R7y58KcYnqKEYF84X9cK1uJQ9a+VWEWGXujMa4fnCGoVdKNYhANqbZg==",
+      "type": "package",
+      "path": "microsoft.extensions.options/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Options.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Options.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
+        "microsoft.extensions.options.3.1.6.nupkg.sha512",
+        "microsoft.extensions.options.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/3.1.6": {
+      "sha512": "X+h3tO383iMbtFxYp6Al4pgBzbfQKJY8/gd4U7+sZy90XeSfnw5SwHyCiRrAePG6kee4zCGsvQHPCqaTZ876hw==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.3.1.6.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec"
+      ]
+    },
+    "Microsoft.JSInterop/3.1.6": {
+      "sha512": "k/AaZDugrwLO4gkLrPkFiWIzjC0BxPGF2yds6P6PYXNG4Jw/od3UZJrVSRLakQPDsnXLMDiyg7uGWtDI17FtSQ==",
+      "type": "package",
+      "path": "microsoft.jsinterop/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.JSInterop.dll",
+        "lib/netcoreapp3.1/Microsoft.JSInterop.xml",
+        "lib/netstandard2.0/Microsoft.JSInterop.dll",
+        "lib/netstandard2.0/Microsoft.JSInterop.xml",
+        "microsoft.jsinterop.3.1.6.nupkg.sha512",
+        "microsoft.jsinterop.nuspec"
+      ]
+    },
+    "Microsoft.JSInterop.WebAssembly/3.2.1": {
+      "sha512": "wYKx4YeBTnv1bzKZtdsWH0O9OmmYm7zq56QkKCUdl1hDg4Gn0lmCDfYBC0r1k5/Wh64IveuWwpkyTWjqCmp4pg==",
+      "type": "package",
+      "path": "microsoft.jsinterop.webassembly/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/netstandard2.1/Microsoft.JSInterop.WebAssembly.dll",
+        "lib/netstandard2.1/Microsoft.JSInterop.WebAssembly.xml",
+        "microsoft.jsinterop.webassembly.3.2.1.nupkg.sha512",
+        "microsoft.jsinterop.webassembly.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Blazored.Modal >= 5.1.0",
+      "Newtonsoft.Json >= 12.0.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Bianca\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
+      "projectName": "NeTorroWebApp",
+      "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
+      "packagesPath": "C:\\Users\\Bianca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Bianca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "Blazored.Modal": {
+            "target": "Package",
+            "version": "[5.1.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

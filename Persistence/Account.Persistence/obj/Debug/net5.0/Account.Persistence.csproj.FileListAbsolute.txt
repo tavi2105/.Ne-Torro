@@ -1,0 +1,15 @@
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\bin\Debug\net5.0\Account.Persistence.deps.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\bin\Debug\net5.0\Account.Persistence.runtimeconfig.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\bin\Debug\net5.0\Account.Persistence.runtimeconfig.dev.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\bin\Debug\net5.0\Account.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\bin\Debug\net5.0\ref\Account.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\bin\Debug\net5.0\Account.Persistence.pdb
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\obj\Debug\net5.0\Account.Persistence.csprojAssemblyReference.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\obj\Debug\net5.0\Account.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\obj\Debug\net5.0\Account.Persistence.AssemblyInfoInputs.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\obj\Debug\net5.0\Account.Persistence.AssemblyInfo.cs
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\obj\Debug\net5.0\Account.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\obj\Debug\net5.0\Account.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\obj\Debug\net5.0\ref\Account.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\obj\Debug\net5.0\Account.Persistence.pdb
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Account.Persistence\obj\Debug\net5.0\Account.Persistence.genruntimeconfig.cache
