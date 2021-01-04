@@ -7,6 +7,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Predictions.Business;
 using Predictions.Persistence;
+using Microsoft.Extensions.ML;
+using PredictionsApi.DataModels;
 
 namespace PredictionsApi
 {
@@ -22,6 +24,8 @@ namespace PredictionsApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddPredictionEnginePool<PredictionData, DataPredictions>()
+                .FromFile(modelName: "StockPrediction_trainML", filePath: @"../PredictionsApi/MLModels/MLModel.zip", watchForChanges: true);
             var connectionString = Configuration.GetConnectionString("Prediction");
              services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
