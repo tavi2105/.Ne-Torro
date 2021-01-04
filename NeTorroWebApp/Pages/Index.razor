@@ -1,8 +1,40 @@
 ﻿@page "/"
     <style>
-    body { background-image: url('C:\Users\bpantaru\Desktop\.netorro\clona\.Ne-Torro\PredictionsWebApp\Pages\img\pexels-energepiccom-159888.jpg'); }
-    </style>
-    <h1>Hello!</h1>
 
-    Welcome to the best Stock Price Prediction App!.
+
+        .main-div {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        #hello, .welcome {
+            font-family: 'Courier New', monospace;
+            color: lightyellow;
+        }
+        #hello {
+            font-size: 70px;
+        }
+        .welcome {
+            font-size: 50px;
+            font-weight: 500;
+        }
+        #best { 
+            font-weight: 900;
+            font-style: italic;
+        }
+    </style>
+    <div class="main-div">
+        <h1 id="hello">>> Hello!</h1>
+
+        <a class="welcome">>> Welcome</a>
+        <a class="welcome">>> to the</a>
+        <a id ="best" class="welcome">>> best</a>
+        <a class="welcome">>> Stock</a>
+        <a class="welcome">>> Price</a>
+        <a class="welcome">>> Prediction</a>
+        <a class="welcome">>> App!</a>
+    </div>
+  
 
