@@ -4,20 +4,16 @@
 @inject IFinanceService FinanceService
 @inject IModalService Modal
 
-
-<h1>Financial State</h1>
-
-<p>Financial History</p>
+<h1 class="finances">Financial State</h1>
+<p class="finances">Financial History</p>
 @if (IsModalClosed)
 {
     <button class="btn btn-primary" @onclick="@ShowAddPopup"> Add</button>
     <br />
 }
-
-
 @if (finances == null)
 {
-    <p><em>Loading...</em></p>
+    <p class="finances"><em>Loading...</em></p>
 }
 else
 {
@@ -46,6 +42,7 @@ else
         </tbody>
     </table>
 }
+
 
 @code {
     private List<Finance> finances;
@@ -89,3 +86,14 @@ else
     }
 
 }
+
+
+<style>
+    .finances {
+        color: navajowhite;
+    }
+
+    .table {
+        color: floralwhite;
+    }
+</style>

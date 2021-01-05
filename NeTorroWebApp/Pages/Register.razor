@@ -1,24 +1,24 @@
 ﻿@page "/Register"
-@using Models 
+@using Models
 <h1>Register</h1>
-<EditForm Model="@user" OnValidSubmit="@OnValidSubmit" class ="section-1-container section-container">
+<EditForm Model="@user" OnValidSubmit="@OnValidSubmit" class="section-1-container section-container">
     <DataAnnotationsValidator />
     <div class="form-group">
-        <label>First Name :</label>
+        <label class="label-text">First Name :</label>
         <div>
             <InputText @bind-Value="@user.FirstName" class="form-control col-sm-5" />
             <ValidationMessage For="@(() => user.FirstName)" />
         </div>
     </div>
     <div class="form-group">
-        <label>Last Name :</label>
+        <label class="label-text">Last Name :</label>
         <div>
             <InputText @bind-Value="@user.LastName" class="form-control col-sm-5" />
             <ValidationMessage For="@(() => user.LastName)" />
         </div>
     </div>
     <div class="form-group">
-        <label> Phone number:</label>
+        <label class="label-text"> Phone number:</label>
         <div>
             <InputText @bind-Value="@user.PhoneNumber" class="form-control col-sm-5" />
             <ValidationMessage For="@(() => user.PhoneNumber)" />
@@ -26,14 +26,14 @@
     </div>
     <div class="form-group ">
         <div>
-            <label>Birthday</label>
+            <label class="label-text">Birthday</label>
             <div>
                 <InputDate @bind-Value="@user.Birthday" class="form-control col-sm-5" />
                 <ValidationMessage For="@(() => user.Birthday)" />
             </div>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">
+    <button id="register-btn" type="submit" class="btn btn-primary">
         @ButtonText
     </button>
 </EditForm>
@@ -49,3 +49,50 @@
 
 
 }
+
+
+<style>
+    h1 {
+        color: navajowhite;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 100px;
+        align-self: center;
+        margin-top: 0px;
+    }
+
+    .register-body {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .label-text {
+        font-size: 30px;
+        color: lightgoldenrodyellow
+    }
+
+    .form-control {
+        height: 40px;
+        max-width: 100% !important;
+        width: 300px;
+        border-radius: 25px;
+    }
+
+    #register-btn {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        margin-top: 30px;
+        width: 200px;
+        height: 45px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+</style>
