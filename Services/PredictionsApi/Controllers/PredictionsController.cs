@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using PredictionsApi.DataModels;
 using Microsoft.Extensions.ML;
 using System;
+using Predictions.Persistence.Entities;
 
 namespace PredictionsApi.Controllers
 {
@@ -48,7 +49,10 @@ namespace PredictionsApi.Controllers
             }
             
             DataPredictions prediction = _predictionEnginePool.Predict(modelName: "StockPrediction_trainML", example: input);
+            var newPrediction = new Prediction { ClosePrice = prediction.Score, CompanyId = 1, HighPrice = input.High, LowPrice = input.Low, OpenPrice = input.Open, Volume = (long)input.Volume };
 
+
+            _businessLogic.CreatePrediction(newPrediction);
             float predictedData = prediction.Score;
 
             Console.WriteLine(predictedData);

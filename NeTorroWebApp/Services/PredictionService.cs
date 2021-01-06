@@ -29,7 +29,7 @@ namespace NeTorroWebApp.Services
             var json = JsonConvert.SerializeObject(prediction);
             var httpContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
             Console.WriteLine("Fuck you, dotnet" + httpContent + json);
-            var response = await _client.PostAsync("/api/v1/predictions", httpContent);
+            var response = await _client.PostAsync("api/predictions", httpContent);
         }
     }
 }

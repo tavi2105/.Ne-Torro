@@ -62,5 +62,10 @@ namespace Predictions.Business
             }
             return predictionsDto;
         }
+
+        public Task CreatePrediction(Prediction prediction)
+        {
+           return  _repository.CreatePrediction(prediction);
+        }
      }
 }
