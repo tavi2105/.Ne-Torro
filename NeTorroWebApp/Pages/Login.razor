@@ -1,36 +1,41 @@
 ﻿@page "/Login"
 @using Models
+@using Services
+@inject IUserService AuthorizationService
 <h1>Login</h1>
-<EditForm Model="@user" OnValidSubmit="@OnValidSubmit" >
+<EditForm Model="@user" OnValidSubmit="@OnValidSubmit">
     <DataAnnotationsValidator />
     <div class="form-group ">
         <label>Email :</label>
         <div>
-            <InputText @bind-Value="@user.Email" class="form-control col-sm-5" />
-            <ValidationMessage For="@(() => user.Email)" />
+            <InputText @bind-Value="@user.Username" class="form-control col-sm-5" />
+            <ValidationMessage For="@(() => user.Username)" />
         </div>
     </div>
     <div class="form-group">
         <label>Password :</label>
         <div>
-            <InputText  type="password" @bind-Value="@user.Password" class="form-control col-sm-5" />
+            <InputText type="password" @bind-Value="@user.Password" class="form-control col-sm-5" />
             <ValidationMessage For="@(() => user.Password)" />
         </div>
     </div>
- 
-    <button type="submit" class="btn btn-primary">
+
+    <button type="submit" @onclick="() => OnFormSubmit()" class="btn btn-primary">
         @ButtonText
     </button>
 </EditForm>
 
 @code {
 
-    public UserLogin user = new UserLogin();
+    public LoginModel user = new LoginModel();
 
-    public string ButtonText { get; set; } = "Register";
+    public string ButtonText { get; set; } = "Login";
 
     public EventCallback OnValidSubmit { get; set; }
 
-
+    public async void OnFormSubmit()
+    {
+          var x = await AuthorizationService.Login(user);
+    }
 
 }
