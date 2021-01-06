@@ -14,6 +14,7 @@ namespace PredictionsApi.Controllers
 
         private readonly IPredictionBusinessLogic _businessLogic;
         private readonly PredictionEnginePool<PredictionData, DataPredictions> _predictionEnginePool;
+        private readonly IPredictionRepository _companyRepository;
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -31,12 +32,13 @@ namespace PredictionsApi.Controllers
             return Ok(result);
         }
 
-        public PredictionsController(PredictionEnginePool<PredictionData, DataPredictions> predictionEnginePool, IPredictionBusinessLogic businessLogic)
+        public PredictionsController(PredictionEnginePool<PredictionData, DataPredictions> predictionEnginePool, IPredictionBusinessLogic businessLogic, IPredictionRepository repository)
         {
             _businessLogic = businessLogic;
             _predictionEnginePool = predictionEnginePool;
+            _companyRepository = repository;
         }
-
+        
         [HttpPost]
         public ActionResult<string> Post([FromBody] PredictionData input)
         {
@@ -44,7 +46,7 @@ namespace PredictionsApi.Controllers
             {
                 return BadRequest();
             }
-
+            
             DataPredictions prediction = _predictionEnginePool.Predict(modelName: "StockPrediction_trainML", example: input);
 
             float predictedData = prediction.Score;
@@ -52,6 +54,15 @@ namespace PredictionsApi.Controllers
             Console.WriteLine(predictedData);
             return Ok(predictedData);
         }
+        /*
+        [HttpPost]
+        public async Task<IActionResult> PostJustName([FromBody] string companyName, string date)
+        {
+            var result = await _companyRepository.GetCompanyByName(companyName);
+            if (result == null)
+                return NotFound();
+            return Ok(result);
+        }*/
     }
 }
 

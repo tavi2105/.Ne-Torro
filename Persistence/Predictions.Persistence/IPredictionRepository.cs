@@ -13,6 +13,8 @@ namespace Predictions.Persistence
         public Task<List<Company>> GetCompanies();
 
         public Task<Company> GetCompanyById(int id);
-       
+
+        public Task<Company> GetCompanyByName(string name);
+
     }
 }

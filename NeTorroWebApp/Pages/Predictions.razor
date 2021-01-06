@@ -3,9 +3,14 @@
 @using Models
 @inject IPredictionService PredictionService
 @inject NavigationManager NavManager
-
+@inject IModalService Modal
 
 <h1>Company stock price predictions</h1>
+@if (IsModalClosed)
+{
+    <button class="btn btn-primary" @onclick="@ShowAddPopup"> Add</button>
+    <br />
+}
 
 @if (predictions == null)
 {
@@ -38,11 +43,11 @@ else
                     <td>@prediction.ClosePrice</td>
                     <td>@prediction.Volume</td>
                 </tr>
-                
+
             }
         </tbody>
     </table>
-    <a href="https://localhost:5005/api/v1/predictions"><input type="submit" value="Calculate" name='button' /></a>
+    <button class="btn btn-primary" @onclick="@ShowAddPopup"> Add</button>
     /*
     <EditForm Model="@prediction" OnValidSubmit="@OnInitializedAsync">
     <DataAnnotationsValidator />
@@ -75,5 +80,33 @@ else
     public void NavigateToCompany(int id)
     {
         NavManager.NavigateTo("/company/" + id);
+    }
+
+    private bool IsModalClosed = true;
+
+    private async Task ShowAddPopup()
+    {
+        if (IsModalClosed)
+        {
+            var modal = Modal.Show<CreatePredPopup>("Add Finance");
+            IsModalClosed = false;
+            var result = await modal.Result;
+            IsModalClosed = true;
+        }
+    }
+
+    private async Task ShowEditPopup(int id)
+    {
+
+        if (IsModalClosed)
+        {
+            var parameters = new ModalParameters();
+            parameters.Add(nameof(Finance.Id), id);
+
+            var modal = Modal.Show<CreatePredPopup>("Update Finance", parameters);
+            IsModalClosed = false;
+            var result = await modal.Result;
+            IsModalClosed = true;
+        }
     }
 }

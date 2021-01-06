@@ -8,5 +8,6 @@ namespace NeTorroWebApp.Services
     public interface IPredictionService
     {
         Task<List<Prediction>> GetPredictions();
+        void CreatePredictionStatement(Prediction prediction);
     }
 }
