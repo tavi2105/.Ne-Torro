@@ -1,0 +1,50 @@
+﻿@using Services
+@using Models
+@inject IPredictionService predictionService
+
+<EditForm Model="@prediction" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <label for="CompanyName">Name</label>
+        <InputText id="CompanyName" class="form-control" @bind-Value="prediction.CompanyName" />
+    </div>
+    <div class="form-group">
+        <label for="Open">Open</label>
+        <InputNumber id="Open" class="form-control" @bind-Value="prediction.OpenPrice" />
+    </div>
+    <div class="form-group">
+        <label for="High">High </label>
+        <InputNumber id="High" class="form-control" @bind-Value="prediction.HighPrice" />
+    </div>
+    <div class="form-group">
+        <label for="Low">Low </label>
+        <InputNumber id="Low" class="form-control" @bind-Value="prediction.LowPrice" />
+    </div>
+    <div class="form-group">
+        <label for="Volume">Volume </label>
+        <InputNumber id="Volume" class="form-control" @bind-Value="prediction.Volume" />
+    </div>
+    <div class="form-group">
+        <label for="Date">Date </label>
+        <InputDate id="Date" class="form-control" @bind-Value="prediction.Date" />
+    </div>
+    <div class="container btn-group">
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary " >Calculate</button>
+            </div>
+        </div>
+    </div>
+</EditForm>
+@code {
+
+    private Prediction prediction = new Prediction();
+    [CascadingParameter] BlazoredModalInstance ModalInstance { get; set; }
+
+    private void HandleValidSubmit()
+    {
+        predictionService.CreatePredictionStatement(prediction);
+        ModalInstance.Close(ModalResult.Ok<Prediction>(prediction));
+    }
+}

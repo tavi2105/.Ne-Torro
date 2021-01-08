@@ -29,5 +29,17 @@ namespace Predictions.Persistence
         {
             return _context.Companies.Include(p => p.Predictions).FirstOrDefaultAsync(c => c.Id == id);
         }
+
+        public Task<Company> GetCompanyByName(string name)
+        {
+            return _context.Companies.Include(p => p.Predictions).FirstOrDefaultAsync(c => c.Name == name);
+        }
+
+        public Task CreatePrediction(Prediction prediction)
+        {
+            _context.Predictions.Add(prediction);
+            _context.SaveChanges();
+            return Task.CompletedTask;
+        }
     }
 }
