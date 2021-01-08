@@ -1,0 +1,15 @@
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\bin\Debug\net5.0\Predictions.Persistence.deps.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\bin\Debug\net5.0\Predictions.Persistence.runtimeconfig.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\bin\Debug\net5.0\Predictions.Persistence.runtimeconfig.dev.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\bin\Debug\net5.0\Predictions.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\bin\Debug\net5.0\ref\Predictions.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\bin\Debug\net5.0\Predictions.Persistence.pdb
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\obj\Debug\net5.0\Predictions.Persistence.csprojAssemblyReference.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\obj\Debug\net5.0\Predictions.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\obj\Debug\net5.0\Predictions.Persistence.AssemblyInfoInputs.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\obj\Debug\net5.0\Predictions.Persistence.AssemblyInfo.cs
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\obj\Debug\net5.0\Predictions.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\obj\Debug\net5.0\Predictions.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\obj\Debug\net5.0\ref\Predictions.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\obj\Debug\net5.0\Predictions.Persistence.pdb
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\Predictions.Persistence\obj\Debug\net5.0\Predictions.Persistence.genruntimeconfig.cache

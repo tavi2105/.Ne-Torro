@@ -1,0 +1,15 @@
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\bin\Debug\net5.0\FinancialStatement.Persistence.deps.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\bin\Debug\net5.0\FinancialStatement.Persistence.runtimeconfig.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\bin\Debug\net5.0\FinancialStatement.Persistence.runtimeconfig.dev.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\bin\Debug\net5.0\FinancialStatement.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\bin\Debug\net5.0\ref\FinancialStatement.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\bin\Debug\net5.0\FinancialStatement.Persistence.pdb
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\obj\Debug\net5.0\FinancialStatement.Persistence.csprojAssemblyReference.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\obj\Debug\net5.0\FinancialStatement.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\obj\Debug\net5.0\FinancialStatement.Persistence.AssemblyInfoInputs.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\obj\Debug\net5.0\FinancialStatement.Persistence.AssemblyInfo.cs
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\obj\Debug\net5.0\FinancialStatement.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\obj\Debug\net5.0\FinancialStatement.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\obj\Debug\net5.0\ref\FinancialStatement.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\obj\Debug\net5.0\FinancialStatement.Persistence.pdb
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Persistence\FinancialStatement.Persistence\obj\Debug\net5.0\FinancialStatement.Persistence.genruntimeconfig.cache

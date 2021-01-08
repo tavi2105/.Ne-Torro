@@ -1,3 +1,10 @@
+﻿@page "/Register"
+@using Models
+<h1>Register</h1>
+<EditForm Model="@user" OnValidSubmit="@OnValidSubmit" class="section-1-container section-container">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label class="label-text">First Name :</label>
 @page "/Register"
 @using Models
 @using Services
@@ -13,6 +20,7 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="label-text">Last Name :</label>
 
         <label>Email :</label>
         <div>
@@ -21,6 +29,7 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="label-text"> Phone number:</label>
         <label> Password</label>
         <div>
             <InputText  type="password" @bind-Value="@registerUser.Password" class="form-control col-sm-5" />
@@ -57,15 +66,15 @@
 
 }
 
-
 <style>
     h1 {
         color: navajowhite;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size:100px;
-        align-self:center;
+        font-size: 100px;
+        align-self: center;
         margin-top: 0px;
     }
+
     .register-body {
         display: flex;
         align-content: center;
@@ -73,13 +82,16 @@
         align-items: center;
         margin: 0px;
     }
+
     .label-text {
         font-size: 30px;
         color: lightgoldenrodyellow
     }
+
     .form-control {
-        width: 300px;
         height: 40px;
+        max-width: 100% !important;
+        width: 300px;
         border-radius: 25px;
     }
 
@@ -98,27 +110,6 @@
         cursor: pointer;
         margin-right: 30px;
     }
-
-        #register-btn span {
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-            transition: 0.5s;
-        }
-
-            #register-btn span:after {
-                content: '\00bb';
-                position: absolute;
-                opacity: 0;
-                top: 0;
-                right: -20px;
-                transition: 0.5s;
-            }
-
-        #register-btn:hover span {
-            padding-right: 25px;
-        }
-
             #register-btn:hover span:after {
                 opacity: 1;
                 right: 0;

@@ -4,12 +4,11 @@
 @inject IPredictionService PredictionService
 @inject NavigationManager NavManager
 
-
-<h1>Company stock price predictions</h1>
+<h1 class="predictions">Company stock price predictions</h1>
 
 @if (predictions == null)
 {
-    <p><em>Loading predictions...</em></p>
+    <p class="predictions"><em>Loading predictions...</em></p>
 }
 else
 {
@@ -61,6 +60,7 @@ else
 </EditForm>*/
 }
 
+
 @code {
     private List<Prediction> predictions;
     private Prediction prediction = new Prediction();
@@ -77,3 +77,13 @@ else
         NavManager.NavigateTo("/company/" + id);
     }
 }
+
+
+<style>
+    .predictions {
+        color: navajowhite;
+    }
+    .table {
+        color: whitesmoke;
+    }
+</style>
