@@ -36,16 +36,36 @@ else
                     <td>@prediction.OpenPrice</td>
                     <td>@prediction.ClosePrice</td>
                     <td>@prediction.Volume</td>
-
                 </tr>
+                
             }
         </tbody>
     </table>
+    <a href="https://localhost:5005/api/v1/predictions"><input type="submit" value="Calculate" name='button' /></a>
+    /*
+    <EditForm Model="@prediction" OnValidSubmit="@OnInitializedAsync">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <InputString id="Expense" class="form-control" @bind-Value="prediction.CompanyName" />
+    </div>
+    <div class="container btn-group">
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary ">Centered button</button>
+            </div>
+        </div>
+    </div>
+</EditForm>*/
 }
 
 
 @code {
     private List<Prediction> predictions;
+    private Prediction prediction = new Prediction();
+    [CascadingParameter] BlazoredModalInstance ModalInstance { get; set; }
+
 
     protected override async Task OnInitializedAsync()
     {

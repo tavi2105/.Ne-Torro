@@ -1,9 +1,10 @@
 ﻿using FinancialStatement.Business;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace FinancialStatementApi.Controllers
-{
+{   [Authorize]
     [Route("/api/v1/financialstatement")]
     public class FinancialStatementController : Controller
     {

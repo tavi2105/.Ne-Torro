@@ -5,23 +5,35 @@
     <DataAnnotationsValidator />
     <div class="form-group">
         <label class="label-text">First Name :</label>
+@page "/Register"
+@using Models
+@using Services
+@inject IUserService AuthorizationService
+<h1>Register</h1>
+<EditForm Model="@registerUser" OnValidSubmit="@OnValidSubmit" class="section-1-container section-container">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label>Username :</label>
         <div>
-            <InputText @bind-Value="@user.FirstName" class="form-control col-sm-5" />
-            <ValidationMessage For="@(() => user.FirstName)" />
+            <InputText @bind-Value="@registerUser.Username" class="form-control col-sm-5" />
+            <ValidationMessage For="@(() => registerUser.Username)" />
         </div>
     </div>
     <div class="form-group">
         <label class="label-text">Last Name :</label>
+
+        <label>Email :</label>
         <div>
-            <InputText @bind-Value="@user.LastName" class="form-control col-sm-5" />
-            <ValidationMessage For="@(() => user.LastName)" />
+            <InputText @bind-Value="@registerUser.Email" class="form-control col-sm-5" />
+            <ValidationMessage For="@(() => registerUser.Email)" />
         </div>
     </div>
     <div class="form-group">
         <label class="label-text"> Phone number:</label>
+        <label> Password</label>
         <div>
-            <InputText @bind-Value="@user.PhoneNumber" class="form-control col-sm-5" />
-            <ValidationMessage For="@(() => user.PhoneNumber)" />
+            <InputText  type="password" @bind-Value="@registerUser.Password" class="form-control col-sm-5" />
+            <ValidationMessage For="@(() => registerUser.Password)" />
         </div>
     </div>
     <div class="form-group ">
@@ -34,22 +46,25 @@
         </div>
     </div>
     <button id="register-btn" type="submit" class="btn btn-primary">
+    
+    <button type="submit" @onclick=" () => OnFormSubmit()" class="btn btn-primary">
         @ButtonText
     </button>
 </EditForm>
 
 @code {
 
-    public User user = new User();
-
+    public RegisterModel registerUser = new RegisterModel();
     public string ButtonText { get; set; } = "Register";
 
     public EventCallback OnValidSubmit { get; set; }
 
-
+    public async void OnFormSubmit()
+    {
+        await AuthorizationService.Register(registerUser);
+    }
 
 }
-
 
 <style>
     h1 {
@@ -95,4 +110,8 @@
         cursor: pointer;
         margin-right: 30px;
     }
+            #register-btn:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
 </style>
