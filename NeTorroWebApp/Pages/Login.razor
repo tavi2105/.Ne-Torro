@@ -1,31 +1,5 @@
 ﻿@page "/Login"
 @using Models
-<body id="login-body">
-    <h1>Login</h1>
-    <EditForm Model="@user" OnValidSubmit="@OnValidSubmit">
-        <DataAnnotationsValidator />
-        <div class="form-group ">
-            <label class="label-text">Email :</label>
-            <div>
-                <InputText @bind-Value="@user.Email" class="form-control col-sm-5" />
-                <ValidationMessage For="@(() => user.Email)" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="label-text">Password :</label>
-            <div>
-                <InputText type="password" @bind-Value="@user.Password" class="form-control col-sm-5" />
-                <ValidationMessage For="@(() => user.Password)" />
-            </div>
-        </div>
-
-        <button id="login-btn" type="submit" class="btn btn-primary">
-            @ButtonText
-        </button>
-
-    </EditForm>
-
-</body>
 @using Services
 @inject IUserService AuthorizationService
 <h1>Login</h1>
@@ -46,7 +20,6 @@
         </div>
     </div>
 
-    <button id="login-btn" type="submit" class="btn btn-primary">
     <button type="submit" @onclick="() => OnFormSubmit()" class="btn btn-primary">
         @ButtonText
     </button>
@@ -127,57 +100,7 @@
 
         #login-btn:hover span {
             padding-right: 25px;
-        }
+       }
 
-}
 
-<style>
-    h1 {
-        color: navajowhite;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 100px;
-        align-self: center;
-        margin-top: 0px;
-    }
-
-    .login-body {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        margin: 0px;
-    }
-
-    .label-text {
-        font-size: 30px;
-        color: lightgoldenrodyellow
-    }
-
-    .form-control {
-        height: 40px;
-        max-width: 100% !important;
-        width: 300px;
-        border-radius: 25px;
-    }
-
-    #login-btn {
-        display: inline-block;
-        border-radius: 4px;
-        background-color: #f4511e;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 28px;
-        margin-top: 30px;
-        width: 200px;
-        height: 45px;
-        transition: all 0.5s;
-        cursor: pointer;
-    }
-</style>
-=======
-            #login-btn:hover span:after {
-                opacity: 1;
-                right: 0;
-            }
 </style>

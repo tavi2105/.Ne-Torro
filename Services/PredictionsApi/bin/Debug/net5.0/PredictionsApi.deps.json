@@ -29,6 +29,11 @@
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "5.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.1",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
+          "Microsoft.Extensions.ML": "1.5.4",
+          "Microsoft.ML": "1.5.4",
+          "Microsoft.ML.FastTree": "1.5.4",
+          "Microsoft.ML.Mkl.Components": "1.5.4",
+          "Microsoft.ML.Mkl.Redist": "1.5.4",
           "Predictions.Business": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -146,7 +151,7 @@
           "Microsoft.Extensions.Logging.EventLog": "5.0.0.0",
           "Microsoft.Extensions.Logging.EventSource": "5.0.0.0",
           "Microsoft.Extensions.Logging.TraceSource": "5.0.0.0",
-          "Microsoft.Extensions.ObjectPool": "5.0.0.0",
+          "Microsoft.Extensions.ObjectPool.Reference": "5.0.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "5.0.0.0",
           "Microsoft.Extensions.Options.DataAnnotations": "5.0.0.0",
           "Microsoft.Extensions.Options.Reference": "5.0.0.0",
@@ -216,7 +221,7 @@
           "System.Linq.Expressions": "5.0.0.0",
           "System.Linq.Parallel": "5.0.0.0",
           "System.Linq.Queryable": "5.0.0.0",
-          "System.Memory": "5.0.0.0",
+          "System.Memory.Reference": "5.0.0.0",
           "System.Net": "4.0.0.0",
           "System.Net.Http": "5.0.0.0",
           "System.Net.Http.Json": "5.0.0.0",
@@ -287,7 +292,7 @@
           "System.Text.Encodings.Web": "5.0.0.0",
           "System.Text.Json": "5.0.0.0",
           "System.Text.RegularExpressions.Reference": "5.0.0.0",
-          "System.Threading.Channels": "5.0.0.0",
+          "System.Threading.Channels.Reference": "5.0.0.0",
           "System.Threading.Reference": "5.0.0.0",
           "System.Threading.Overlapped": "5.0.0.0",
           "System.Threading.Tasks.Dataflow": "5.0.0.0",
@@ -597,6 +602,25 @@
         }
       },
       "Microsoft.Extensions.Logging.Abstractions/5.0.0": {},
+      "Microsoft.Extensions.ML/1.5.4": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Logging": "5.0.0",
+          "Microsoft.Extensions.ObjectPool": "2.1.0",
+          "Microsoft.Extensions.Options": "5.0.0",
+          "Microsoft.ML": "1.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.ML.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.ML.dll": {}
+        }
+      },
+      "Microsoft.Extensions.ObjectPool/2.1.0": {},
       "Microsoft.Extensions.Options/5.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
@@ -692,6 +716,241 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
+        }
+      },
+      "Microsoft.ML/1.5.4": {
+        "dependencies": {
+          "Microsoft.ML.CpuMath": "1.5.4",
+          "Microsoft.ML.DataView": "1.5.4",
+          "Newtonsoft.Json": "12.0.2",
+          "System.CodeDom": "4.4.0",
+          "System.Collections.Immutable": "5.0.0",
+          "System.Memory": "4.5.3",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          },
+          "lib/netstandard2.0/Microsoft.ML.Data.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          },
+          "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          },
+          "lib/netstandard2.0/Microsoft.ML.PCA.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          },
+          "lib/netstandard2.0/Microsoft.ML.StandardTrainers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          },
+          "lib/netstandard2.0/Microsoft.ML.Transforms.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          },
+          "lib/netstandard2.0/Microsoft.ML.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libLdaNative.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libLdaNative.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/LdaNative.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.1700.420.61711"
+          },
+          "runtimes/win-x86/native/LdaNative.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.1700.420.61711"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.Core.dll": {},
+          "lib/netstandard2.0/Microsoft.ML.Data.dll": {},
+          "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll": {},
+          "lib/netstandard2.0/Microsoft.ML.PCA.dll": {},
+          "lib/netstandard2.0/Microsoft.ML.StandardTrainers.dll": {},
+          "lib/netstandard2.0/Microsoft.ML.Transforms.dll": {},
+          "lib/netstandard2.0/Microsoft.ML.dll": {}
+        }
+      },
+      "Microsoft.ML.CpuMath/1.5.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.ML.CpuMath.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.ML.CpuMath.dll": {}
+        }
+      },
+      "Microsoft.ML.DataView/1.5.4": {
+        "dependencies": {
+          "System.Collections.Immutable": "5.0.0",
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.DataView.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.DataView.dll": {}
+        }
+      },
+      "Microsoft.ML.FastTree/1.5.4": {
+        "dependencies": {
+          "Microsoft.ML": "1.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.FastTree.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libFastTreeNative.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libFastTreeNative.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/FastTreeNative.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.1700.420.61711"
+          },
+          "runtimes/win-x86/native/FastTreeNative.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.1700.420.61711"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.FastTree.dll": {}
+        }
+      },
+      "Microsoft.ML.Mkl.Components/1.5.4": {
+        "dependencies": {
+          "Microsoft.ML": "1.5.4",
+          "Microsoft.ML.Mkl.Redist": "1.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.Mkl.Components.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libSymSgdNative.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libSymSgdNative.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/SymSgdNative.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.1700.420.61711"
+          },
+          "runtimes/win-x86/native/SymSgdNative.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.1700.420.61711"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.Mkl.Components.dll": {}
+        }
+      },
+      "Microsoft.ML.Mkl.Redist/1.5.4": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.Mkl.Redist.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.500.420.61711"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libMklImports.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libMklProxyNative.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libMklImports.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libMklProxyNative.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/MklImports.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/MklProxyNative.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.1700.420.61711"
+          },
+          "runtimes/win-x64/native/libiomp5md.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "5.0.2018.913"
+          },
+          "runtimes/win-x86/native/MklImports.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/MklProxyNative.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.1700.420.61711"
+          },
+          "runtimes/win-x86/native/libiomp5md.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "5.0.2018.913"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.Mkl.Redist.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
@@ -794,6 +1053,17 @@
         },
         "compile": {
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        }
+      },
+      "System.CodeDom/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.CodeDom.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.CodeDom.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -990,6 +1260,7 @@
           "System.Runtime.Extensions": "4.3.0"
         }
       },
+      "System.Memory/4.5.3": {},
       "System.Net.NameResolution/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1261,6 +1532,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Threading.Channels/4.7.1": {},
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -2064,7 +2336,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.ObjectPool/5.0.0.0": {
+      "Microsoft.Extensions.ObjectPool.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.ObjectPool.dll": {}
         },
@@ -2484,7 +2756,7 @@
         },
         "compileOnly": true
       },
-      "System.Memory/5.0.0.0": {
+      "System.Memory.Reference/5.0.0.0": {
         "compile": {
           "System.Memory.dll": {}
         },
@@ -2910,7 +3182,7 @@
         },
         "compileOnly": true
       },
-      "System.Threading.Channels/5.0.0.0": {
+      "System.Threading.Channels.Reference/5.0.0.0": {
         "compile": {
           "System.Threading.Channels.dll": {}
         },
@@ -3241,6 +3513,20 @@
       "path": "microsoft.extensions.logging.abstractions/5.0.0",
       "hashPath": "microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.ML/1.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3erDYCEKDGKCplrZ50y3zLb3QXRKjg5Ywx9c+DfoJvs+4f1XoR/nr0OD94JBaE5gAyQ0ZLRkH91LqVL+ybsW2w==",
+      "path": "microsoft.extensions.ml/1.5.4",
+      "hashPath": "microsoft.extensions.ml.1.5.4.nupkg.sha512"
+    },
+    "Microsoft.Extensions.ObjectPool/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tIbO45cohqexTJPXBubpwluycDT+6OWy2m7PukG37XMrtQ6Zv4AnoLrgUTaCmpWihSs5RZHKvThiAJFcBlR3AA==",
+      "path": "microsoft.extensions.objectpool/2.1.0",
+      "hashPath": "microsoft.extensions.objectpool.2.1.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.Options/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3296,6 +3582,48 @@
       "sha512": "sha512-Td9Vn9d/0eM1zlUUvaVQzjqdBkBLJ2oGtGL/LYPuiCUAALMeAHVDtpXGk8eYI8Gbduz5n+o7ifldsCIca4MWew==",
       "path": "microsoft.identitymodel.tokens/6.7.1",
       "hashPath": "microsoft.identitymodel.tokens.6.7.1.nupkg.sha512"
+    },
+    "Microsoft.ML/1.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2r7wUesWRCHip6wLfdEFvQ3kAXIPJOJ9M1xeiQE75x1wGwsuPyJC42L1eoe21i00BloqzSNIsMT9EIJkX/kOBA==",
+      "path": "microsoft.ml/1.5.4",
+      "hashPath": "microsoft.ml.1.5.4.nupkg.sha512"
+    },
+    "Microsoft.ML.CpuMath/1.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+sNXKNizd6Rp6Kzg2ikzllrZfTqVVdySiycW8bB7hDTTsEbgxCugURdpSXXQI12XOGi6iersJ2DsAifptYjIOA==",
+      "path": "microsoft.ml.cpumath/1.5.4",
+      "hashPath": "microsoft.ml.cpumath.1.5.4.nupkg.sha512"
+    },
+    "Microsoft.ML.DataView/1.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vg3SvbFCOQtof5r/J1BCQ0p+zN6436GppWVIwodsP6DkKXRz1rpJUT1gTPSRGsjTIJoBDEw/cL7ei+GWZ7YZFw==",
+      "path": "microsoft.ml.dataview/1.5.4",
+      "hashPath": "microsoft.ml.dataview.1.5.4.nupkg.sha512"
+    },
+    "Microsoft.ML.FastTree/1.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yw3Gx7QN5QTEkC5upaSAGboAz9G45S2GUodUI3F70/qcWyXNeMcjmqkWV2jAbiQaLe/3D7sXxWfGAwmtGiwmGA==",
+      "path": "microsoft.ml.fasttree/1.5.4",
+      "hashPath": "microsoft.ml.fasttree.1.5.4.nupkg.sha512"
+    },
+    "Microsoft.ML.Mkl.Components/1.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ae1LROa/ZTZzwuTVawjI+Q3zvJIbGPxYp3Ge4x4ktAFIVHMtO0Z6ek3jZUHLPpRu5re5PBFPaTmc0VFPezJ8Og==",
+      "path": "microsoft.ml.mkl.components/1.5.4",
+      "hashPath": "microsoft.ml.mkl.components.1.5.4.nupkg.sha512"
+    },
+    "Microsoft.ML.Mkl.Redist/1.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Io5RoYUHnFuJu16HNFKxDv9ArciLe0VnYPJexyZkfMLocTuGAvc28N2TgH0QOGH9kI3BMc84IKcYGDPiWhtkuw==",
+      "path": "microsoft.ml.mkl.redist/1.5.4",
+      "hashPath": "microsoft.ml.mkl.redist.1.5.4.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
@@ -3380,6 +3708,13 @@
       "sha512": "sha512-BPvcPxQRMsYZ3HnYmGKRWDwX4Wo29WHh14Q6B10BB8Yfbbcza+agOC2UrBFA1EuaZuOsFLbp6E2+mqVNF/Je8A==",
       "path": "swashbuckle.aspnetcore.swaggerui/5.6.3",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    },
+    "System.CodeDom/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
+      "path": "system.codedom/4.4.0",
+      "hashPath": "system.codedom.4.4.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -3534,6 +3869,13 @@
       "sha512": "sha512-5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "path": "system.linq/4.3.0",
       "hashPath": "system.linq.4.3.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
     },
     "System.Net.NameResolution/4.3.0": {
       "type": "package",
@@ -3758,6 +4100,13 @@
       "sha512": "sha512-VkUS0kOBcUf3Wwm0TSbrevDDZ6BlM+b/HRiapRFWjM5O0NS0LviG0glKmFK+hhPDd1XFeSdU1GmlLhb2CoVpIw==",
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Channels/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "path": "system.threading.channels/4.7.1",
+      "hashPath": "system.threading.channels.4.7.1.nupkg.sha512"
     },
     "System.Threading.Tasks/4.3.0": {
       "type": "package",
@@ -4393,7 +4742,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.ObjectPool/5.0.0.0": {
+    "Microsoft.Extensions.ObjectPool.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -4743,7 +5092,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Memory/5.0.0.0": {
+    "System.Memory.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5098,7 +5447,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Threading.Channels/5.0.0.0": {
+    "System.Threading.Channels.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

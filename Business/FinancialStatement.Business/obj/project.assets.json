@@ -5744,23 +5744,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bianca\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\bpantaru\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\FinancialStatement.Business\\FinancialStatement.Business.csproj",
+      "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\FinancialStatement.Business\\FinancialStatement.Business.csproj",
       "projectName": "FinancialStatement.Business",
-      "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\FinancialStatement.Business\\FinancialStatement.Business.csproj",
-      "packagesPath": "C:\\Users\\Bianca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\FinancialStatement.Business\\obj\\",
+      "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\FinancialStatement.Business\\FinancialStatement.Business.csproj",
+      "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\FinancialStatement.Business\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Bianca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bpantaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5774,8 +5770,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Persistence\\FinancialStatement.Persistence\\FinancialStatement.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Persistence\\FinancialStatement.Persistence\\FinancialStatement.Persistence.csproj"
+            "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Persistence\\FinancialStatement.Persistence\\FinancialStatement.Persistence.csproj": {
+              "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Persistence\\FinancialStatement.Persistence\\FinancialStatement.Persistence.csproj"
             }
           }
         }

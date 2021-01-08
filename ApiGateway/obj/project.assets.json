@@ -988,23 +988,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bianca\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\bpantaru\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\ApiGateway\\ApiGateway.csproj",
+      "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\ApiGateway\\ApiGateway.csproj",
       "projectName": "ApiGateway",
-      "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\ApiGateway\\ApiGateway.csproj",
-      "packagesPath": "C:\\Users\\Bianca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\ApiGateway\\obj\\",
+      "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\ApiGateway\\ApiGateway.csproj",
+      "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\ApiGateway\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Bianca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bpantaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
