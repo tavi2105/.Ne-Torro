@@ -41,15 +41,16 @@ namespace PredictionsApi.Controllers
         }
         
         [HttpPost]
-        public ActionResult<string> Post([FromBody] PredictionData input)
+        public async Task<IActionResult> Post([FromBody] PredictionModel input)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            
-            DataPredictions prediction = _predictionEnginePool.Predict(modelName: "StockPrediction_trainML", example: input);
-            var newPrediction = new Prediction { ClosePrice = prediction.Score, CompanyId = 1, HighPrice = input.High, LowPrice = input.Low, OpenPrice = input.Open, Volume = (long)input.Volume };
+            var company  = await _companyRepository.GetCompanyByName(input.CompanyName);
+            var predict = new PredictionData { Open = (float)input.OpenPrice, Date = Convert.ToString(input.Date), High = (float)input.HighPrice, Low = (float)input.LowPrice, Name = input.CompanyName, Volume = input.Volume };
+            DataPredictions prediction = _predictionEnginePool.Predict(modelName: "StockPrediction_trainML",predict);
+            var newPrediction = new Prediction { ClosePrice = prediction.Score, CompanyId = company.Id, HighPrice = input.HighPrice, LowPrice = input.LowPrice, OpenPrice = input.OpenPrice, Volume = (long)input.Volume };
 
 
             _businessLogic.CreatePrediction(newPrediction);
