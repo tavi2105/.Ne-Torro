@@ -1,0 +1,15 @@
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\bin\Debug\net5.0\FinancialStatement.Business.deps.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\bin\Debug\net5.0\FinancialStatement.Business.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\bin\Debug\net5.0\ref\FinancialStatement.Business.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\bin\Debug\net5.0\FinancialStatement.Business.pdb
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\bin\Debug\net5.0\FinancialStatement.Persistence.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\bin\Debug\net5.0\FinancialStatement.Persistence.pdb
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\obj\Debug\net5.0\FinancialStatement.Business.csprojAssemblyReference.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\obj\Debug\net5.0\FinancialStatement.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\obj\Debug\net5.0\FinancialStatement.Business.AssemblyInfoInputs.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\obj\Debug\net5.0\FinancialStatement.Business.AssemblyInfo.cs
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\obj\Debug\net5.0\FinancialStatement.Business.csproj.CoreCompileInputs.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\obj\Debug\net5.0\FinancialStatement.Business.csproj.CopyComplete
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\obj\Debug\net5.0\FinancialStatement.Business.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\obj\Debug\net5.0\ref\FinancialStatement.Business.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\FinancialStatement.Business\obj\Debug\net5.0\FinancialStatement.Business.pdb

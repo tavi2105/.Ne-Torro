@@ -6,15 +6,9 @@
 @inject IModalService Modal
 
 <h1>Company stock price predictions</h1>
-@if (IsModalClosed)
-{
-    <button class="btn btn-primary" @onclick="@ShowAddPopup"> Add</button>
-    <br />
-}
-
 @if (predictions == null)
 {
-    <p><em>Loading predictions...</em></p>
+    <p class="predictions"><em>Loading predictions...</em></p>
 }
 else
 {
@@ -66,6 +60,7 @@ else
 </EditForm>*/
 }
 
+
 @code {
     private List<Prediction> predictions;
     private Prediction prediction = new Prediction();
@@ -110,3 +105,13 @@ else
         }
     }
 }
+
+
+<style>
+    .predictions {
+        color: navajowhite;
+    }
+    .table {
+        color: whitesmoke;
+    }
+</style>
