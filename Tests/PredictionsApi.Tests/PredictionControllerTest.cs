@@ -13,7 +13,7 @@ namespace PredictionsApi.Tests
         {
             // Arrange & Act	
             var mockRepo = new Mock<IPredictionBusinessLogic>();
-            var controller = new PredictionsController(mockRepo.Object);
+            var controller = new PredictionsController(null,mockRepo.Object);
 
             // Act	
             var result = await controller.GetById(10);

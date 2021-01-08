@@ -26,6 +26,9 @@ namespace NeTorroWebApp
             services.AddServerSideBlazor();
             services.AddScoped<IPredictionService, PredictionService>();
             services.AddScoped<IFinanceService, FinanceService>();
+            services.AddScoped<IUserService, AuthorizationService>();
+            services.AddHttpClient<IUserService,AuthorizationService >(c =>
+             c.BaseAddress = new Uri("https://localhost:5050/authenticate/"));
             services.AddScoped<ICompanyService, CompanyService>();
             services.AddHttpClient<ICompanyService, CompanyService>(c =>
                 c.BaseAddress = new Uri("https://localhost:5050/predictions/"));
