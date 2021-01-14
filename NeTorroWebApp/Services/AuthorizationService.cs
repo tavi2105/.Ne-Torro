@@ -19,20 +19,31 @@ namespace NeTorroWebApp.Services
             _client = client;
         }
 
-        public async Task<string> Login( LoginModel login)
+        public async Task<JWToken> Login( LoginModel login)
         {
             var json = JsonConvert.SerializeObject(login);
             var httpContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
             var response = await _client.PostAsync("api/authenticate/login", httpContent);
-            return await response.ReadContentAs<string>();
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.ReadContentAs<JWToken>();
+            }
+            return await Task.FromResult(JWToken.EmptyToken);
         }
 
-        public async Task Register(RegisterModel register)
+        public async Task<Dictionary<string, List<string>>> Register(RegisterModel register)
         {
             var json = JsonConvert.SerializeObject(register);
             var httpContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
             var response = await _client.PostAsync("api/authenticate/register", httpContent);
-            
+            if(!response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                var deserializedJson = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(result);
+                return await Task.FromResult(deserializedJson);
+            }
+            return await Task.FromResult(new Dictionary<string, List<string>>());
+
         }
 
     }

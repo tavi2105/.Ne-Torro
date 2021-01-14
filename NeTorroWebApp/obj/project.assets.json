@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Blazored.LocalStorage/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Blazored.Modal/5.1.0": {
         "type": "package",
         "dependencies": {
@@ -178,6 +191,19 @@
     }
   },
   "libraries": {
+    "Blazored.LocalStorage/3.0.0": {
+      "sha512": "eXpHDvog+nRvAFsrqVKqGrpHXuyPTH8tgAremHKbteP5nNEROlItfP8Xh8pNMpTovuQ4tl3NyfQcG0rnbjQ5jw==",
+      "type": "package",
+      "path": "blazored.localstorage/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.localstorage.3.0.0.nupkg.sha512",
+        "blazored.localstorage.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/Blazored.LocalStorage.dll"
+      ]
+    },
     "Blazored.Modal/5.1.0": {
       "sha512": "Sw2pWqDWugPFf4BKmO2Cd8SZ4nQluIvgrcINuAFQrCRLoaY1+dp6gGbtEvenLc6pgjyD7TX4eg7qnU4LSpVN6A==",
       "type": "package",
@@ -443,24 +469,29 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Blazored.LocalStorage >= 3.0.0",
       "Blazored.Modal >= 5.1.0",
       "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bpantaru\\.nuget\\packages\\": {}
+    "C:\\Users\\Bianca\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
       "projectName": "NeTorroWebApp",
-      "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
-      "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\NeTorroWebApp\\obj\\",
+      "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
+      "packagesPath": "C:\\Users\\Bianca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\bpantaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bianca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -486,6 +517,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Blazored.LocalStorage": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
           "Blazored.Modal": {
             "target": "Package",
             "version": "[5.1.0, )"

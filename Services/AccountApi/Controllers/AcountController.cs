@@ -13,6 +13,7 @@ using System;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 namespace AccountApi.Controllers
 {
@@ -60,10 +61,10 @@ namespace AccountApi.Controllers
                     );
 
                 return Ok(new
-                {
+                { IdUser = user.Id,
                     token = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo
-                });
+                }); ;
             }
             return Unauthorized();
         }
@@ -84,8 +85,12 @@ namespace AccountApi.Controllers
             };
             var result = await userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User creation failed! Please check user details and try again." });
-
+            {   foreach(var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.Code, error.Description);
+                }
+                return BadRequest(ModelState);
+            }
             return Ok();
         }
 

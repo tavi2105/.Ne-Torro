@@ -1,12 +1,17 @@
 ﻿@page "/Login"
 @using Models
 @using Services
-@inject IUserService AuthorizationService
+@inject IUserService AuthService
+@inject ISessionService SessionService
 <h1>Login</h1>
+@if(invalidCredentials == true)
+{
+    <p style="color: red">Credentials are invalid!</p>
+}
 <EditForm Model="@user" OnValidSubmit="@OnValidSubmit">
     <DataAnnotationsValidator />
     <div class="form-group ">
-        <label class="label-text">Email :</label>
+        <label class="label-text" >Email :</label>
         <div>
             <InputText @bind-Value="@user.Username" class="form-control col-sm-5" />
             <ValidationMessage For="@(() => user.Username)" />
@@ -32,10 +37,22 @@
     public string ButtonText { get; set; } = "Login";
 
     public EventCallback OnValidSubmit { get; set; }
+    public bool invalidCredentials = false;
 
     public async void OnFormSubmit()
     {
-          var x = await AuthorizationService.Login(user);
+        var result = await AuthService.Login(user);
+        if (string.IsNullOrEmpty(result.Token))
+        {
+            invalidCredentials = true;
+            StateHasChanged();
+        }
+        else
+        {
+            invalidCredentials = false;
+            SessionService.SetToken(result);
+
+        }
     }
 
 }

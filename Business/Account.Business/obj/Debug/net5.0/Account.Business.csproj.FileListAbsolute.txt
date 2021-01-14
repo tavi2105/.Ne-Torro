@@ -31,3 +31,6 @@ C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\Business\Account.Business\obj\Debug\n
 C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\Business\Account.Business\obj\Debug\net5.0\ref\Account.Business.dll
 C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\Business\Account.Business\obj\Debug\net5.0\Account.Business.pdb
 C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\Business\Account.Business\obj\Debug\net5.0\Account.Business.genruntimeconfig.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\Account.Business\bin\Debug\net5.0\Account.Business.runtimeconfig.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\Account.Business\bin\Debug\net5.0\Account.Business.runtimeconfig.dev.json
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Business\Account.Business\obj\Debug\net5.0\Account.Business.genruntimeconfig.cache

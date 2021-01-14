@@ -131,3 +131,8 @@ C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\Services\AccountApi\obj\Debug\net5.0\
 C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\Services\AccountApi\obj\Debug\net5.0\ref\AccountApi.dll
 C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\Services\AccountApi\obj\Debug\net5.0\AccountApi.pdb
 C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\Services\AccountApi\obj\Debug\net5.0\AccountApi.genruntimeconfig.cache
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Services\AccountApi\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Services\AccountApi\bin\Debug\net5.0\System.Web.Http.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Services\AccountApi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Services\AccountApi\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\Services\AccountApi\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

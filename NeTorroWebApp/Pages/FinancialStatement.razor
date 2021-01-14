@@ -3,21 +3,23 @@
 @using Models
 @inject IFinanceService FinanceService
 @inject IModalService Modal
+@inject ISessionService SessionService
 
 <h1 class="finances">Financial State</h1>
 <p class="finances">Financial History</p>
-@if (IsModalClosed)
+@if (NotAuthorized)
 {
-    <button class="btn btn-primary" @onclick="@ShowAddPopup"> Add</button>
-    <br />
-}
-@if (finances == null)
-{
-    <p class="finances"><em>Loading...</em></p>
+    <h3 style="color:cadetblue"> You are not authorized to view this page. Please login!</h3>
 }
 else
 {
-    <table class="table" style="color:antiquewhite">
+
+    @if (IsModalClosed)
+    {
+        <button class="btn btn-primary" @onclick="@ShowAddPopup"> Add</button>
+        <br />
+    }
+    <table class="tabokle" style="color:antiquewhite">
         <thead>
             <tr>
                 <th>Income</th>
@@ -47,9 +49,20 @@ else
 @code {
     private List<Finance> finances;
     private bool IsModalClosed = true;
+    private bool NotAuthorized = true;
     protected override async Task OnInitializedAsync()
     {
-        finances = await FinanceService.GetFinancialStatement();
+        var token = await SessionService.GetToken();
+        if (token == null)
+        {
+            NotAuthorized = true;
+        }
+        else
+        {
+            finances = await FinanceService.GetFinancialStatement();
+            NotAuthorized = false;
+        }
+
     }
     private async Task ShowAddPopup()
     {

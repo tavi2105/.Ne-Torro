@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj": {}
+    "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj": {
+    "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
         "projectName": "NeTorroWebApp",
-        "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
-        "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\NeTorroWebApp\\obj\\",
+        "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\NeTorroWebApp.csproj",
+        "packagesPath": "C:\\Users\\Bianca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\NeTorroWebApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bpantaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bianca\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +43,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Blazored.Modal": {
               "target": "Package",
               "version": "[5.1.0, )"

@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using Blazored.Modal;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,9 +25,11 @@ namespace NeTorroWebApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddBlazoredLocalStorage();
             services.AddScoped<IPredictionService, PredictionService>();
             services.AddScoped<IFinanceService, FinanceService>();
             services.AddScoped<IUserService, AuthorizationService>();
+            services.AddScoped<ISessionService, SessionService>();
             services.AddHttpClient<IUserService,AuthorizationService >(c =>
              c.BaseAddress = new Uri("https://localhost:5050/authenticate/"));
             services.AddScoped<ICompanyService, CompanyService>();
@@ -37,6 +40,8 @@ namespace NeTorroWebApp
             services.AddHttpClient<IPredictionService, PredictionService>(c =>
                 c.BaseAddress = new Uri("https://localhost:5050/predictions/"));
             services.AddBlazoredModal();
+            services.AddBlazoredLocalStorage(config =>
+                config.JsonSerializerOptions.WriteIndented = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

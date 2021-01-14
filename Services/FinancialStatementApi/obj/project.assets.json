@@ -5612,19 +5612,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bpantaru\\.nuget\\packages\\": {}
+    "C:\\Users\\Bianca\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Services\\FinancialStatementApi\\FinancialStatementApi.csproj",
+      "projectUniqueName": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Services\\FinancialStatementApi\\FinancialStatementApi.csproj",
       "projectName": "FinancialStatementApi",
-      "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Services\\FinancialStatementApi\\FinancialStatementApi.csproj",
-      "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Services\\FinancialStatementApi\\obj\\",
+      "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Services\\FinancialStatementApi\\FinancialStatementApi.csproj",
+      "packagesPath": "C:\\Users\\Bianca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Services\\FinancialStatementApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\bpantaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bianca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5638,8 +5642,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\FinancialStatement.Business\\FinancialStatement.Business.csproj": {
-              "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\FinancialStatement.Business\\FinancialStatement.Business.csproj"
+            "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\FinancialStatement.Business\\FinancialStatement.Business.csproj": {
+              "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\FinancialStatement.Business\\FinancialStatement.Business.csproj"
             }
           }
         }

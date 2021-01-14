@@ -7,36 +7,69 @@
 <EditForm Model="@registerUser" OnValidSubmit="@OnValidSubmit" class="section-1-container section-container">
     <DataAnnotationsValidator />
     <div class="form-group">
-        <label>Username :</label>
+        <label class="label-text">Username :</label>
         <div>
             <InputText @bind-Value="@registerUser.Username" class="form-control col-sm-5" />
             <ValidationMessage For="@(() => registerUser.Username)" />
         </div>
     </div>
     <div class="form-group">
-        <label class="label-text">Last Name :</label>
-
-        <label>Email :</label>
+        <label class="label-text">Email :</label>
         <div>
             <InputText @bind-Value="@registerUser.Email" class="form-control col-sm-5" />
             <ValidationMessage For="@(() => registerUser.Email)" />
         </div>
     </div>
+    <div class="form-group">
+        <label class="label-text">Password :</label>
+        <div>
+            <InputText type="password" @bind-Value="@registerUser.Password" class="form-control col-sm-5" />
+            <ValidationMessage For="@(() => registerUser.Password)" />
+        </div>
+    </div>
     <button type="submit" @onclick=" () => OnFormSubmit()" class="btn btn-primary">
-        @ButtonText
+        Register
     </button>
 </EditForm>
+@if(@HasRegistered)
+{
+    <p style=" color:forestgreen">  Successfully registered!</p>
+}
+@if(@Errors.Any())
+{
+<ul>
+    @foreach (var error in Errors)
+    {
+        <li style="color:red">
+            @error
+        </li>
+    }
+</ul>
+}
 
 @code {
 
     public RegisterModel registerUser = new RegisterModel();
-    public string ButtonText { get; set; } = "Register";
-
+    public bool HasRegistered = false;
+    public List<string> Errors = new List<string>();
     public EventCallback OnValidSubmit { get; set; }
 
     public async void OnFormSubmit()
     {
-        await AuthorizationService.Register(registerUser);
+        Errors.Clear();
+        var result = await AuthorizationService.Register(registerUser);
+        if(result.Count == 0)
+        {
+            HasRegistered = true;
+        }
+        else
+        {
+            HasRegistered = false;
+            Errors = result.Values.SelectMany(e => e).ToList();
+
+        }
+        StateHasChanged();
+
     }
 
 }

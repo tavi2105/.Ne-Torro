@@ -150,3 +150,6 @@ C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\NeTorroWebApp\obj\Debug\net5.0\NeTorr
 C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\NeTorroWebApp\obj\Debug\net5.0\NeTorroWebApp.genruntimeconfig.cache
 C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\NeTorroWebApp\obj\Debug\net5.0\RazorDeclaration\Pages\CreatePredPopup.razor.g.cs
 C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\NeTorroWebApp\obj\Debug\net5.0\Razor\Pages\CreatePredPopup.razor.g.cs
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\obj\Debug\net5.0\RazorDeclaration\Pages\CreatePredPopup.razor.g.cs
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\obj\Debug\net5.0\Razor\Pages\CreatePredPopup.razor.g.cs
+C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\bin\Debug\net5.0\Blazored.LocalStorage.dll

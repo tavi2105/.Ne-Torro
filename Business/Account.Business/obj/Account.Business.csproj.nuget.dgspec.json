@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj": {}
+    "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj": {
+    "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj",
         "projectName": "Account.Business",
-        "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj",
-        "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Business\\Account.Business\\obj\\",
+        "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\Account.Business\\Account.Business.csproj",
+        "packagesPath": "C:\\Users\\Bianca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Business\\Account.Business\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bpantaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bianca\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +31,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj": {
-                "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj"
+              "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj"
               }
             }
           }
@@ -89,17 +92,20 @@
         }
       }
     },
-    "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj": {
+    "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
         "projectName": "Account.Persistence",
-        "projectPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
-        "packagesPath": "C:\\Users\\bpantaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bpantaru\\Desktop\\Bianca\\.Ne-Torro\\Persistence\\Account.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Persistence\\Account.Persistence\\Account.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Bianca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bianca\\Desktop\\Net\\.Ne-Torro\\Persistence\\Account.Persistence\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bpantaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bianca\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

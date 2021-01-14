@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace NeTorroWebApp.Services
 {
-   public interface IUserService
+    public interface  ISessionService
     {
-        public Task<JWToken> Login(LoginModel login);
-        public Task<Dictionary<string, List<string>>> Register(RegisterModel register);
+          void SetToken(JWToken token);
+          Task<JWToken> GetToken();
+
 
     }
 }

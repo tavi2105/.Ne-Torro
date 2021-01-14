@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\bpantaru\Desktop\Bianca\.Ne-Torro\NeTorroWebApp\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="_content/Blazored.Modal" Path="C:\Users\bpantaru\.nuget\packages\blazored.modal\5.1.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Blazored.Modal" Path="C:\Users\Bianca\.nuget\packages\blazored.modal\5.1.0\build\..\staticwebassets\" />
 </StaticWebAssets>
