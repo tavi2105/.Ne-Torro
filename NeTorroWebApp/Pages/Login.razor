@@ -3,15 +3,17 @@
 @using Services
 @inject IUserService AuthService
 @inject ISessionService SessionService
-<h1>Login</h1>
-@if(invalidCredentials == true)
+@inject NavigationManager NavigationManager
+
+@if (invalidCredentials == true)
 {
     <p style="color: red">Credentials are invalid!</p>
 }
-<EditForm Model="@user" OnValidSubmit="@OnValidSubmit">
+<EditForm Model="@user" OnValidSubmit="@OnValidSubmit" class="section-1-container section-container">
     <DataAnnotationsValidator />
-    <div class="form-group ">
-        <label class="label-text" >Email :</label>
+    <h1>Login</h1>
+    <div class="form-group">
+        <label class="label-text">Username :</label>
         <div>
             <InputText @bind-Value="@user.Username" class="form-control col-sm-5" />
             <ValidationMessage For="@(() => user.Username)" />
@@ -49,8 +51,12 @@
         }
         else
         {
+
             invalidCredentials = false;
             SessionService.SetToken(result);
+            StateHasChanged();
+            NavigationManager.NavigateTo("");
+
 
         }
     }
@@ -58,66 +64,3 @@
 }
 
 
-
-<style>
-    h1 {
-        color: navajowhite;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size:100px;
-        align-self:center;
-        margin-top: 0px;
-    }
-    .login-body {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        margin: 0px;
-    }
-    .label-text {
-        font-size: 30px;
-        color: lightgoldenrodyellow
-    }
-    .form-control {
-        width: 300px;
-        height: 40px;
-        border-radius: 25px;
-    }
-
-    #login-btn {
-        display: inline-block;
-        border-radius: 4px;
-        background-color: #f4511e;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 28px;
-        margin-top: 30px;
-        width: 200px;
-        height: 45px;
-        transition: all 0.5s;
-        cursor: pointer;
-    }
-
-        #login-btn span {
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-            transition: 0.5s;
-        }
-
-            #login-btn span:after {
-                content: '\00bb';
-                position: absolute;
-                opacity: 0;
-                top: 0;
-                right: -20px;
-                transition: 0.5s;
-            }
-
-        #login-btn:hover span {
-            padding-right: 25px;
-       }
-
-
-</style>

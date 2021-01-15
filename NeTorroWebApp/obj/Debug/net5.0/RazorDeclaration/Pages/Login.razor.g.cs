@@ -126,7 +126,7 @@ using Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\Pages\Login.razor"
+#line 35 "C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\Pages\Login.razor"
        
 
     public LoginModel user = new LoginModel();
@@ -146,8 +146,12 @@ using Services;
         }
         else
         {
+
             invalidCredentials = false;
             SessionService.SetToken(result);
+            StateHasChanged();
+            NavigationManager.NavigateTo("");
+
 
         }
     }
@@ -156,6 +160,7 @@ using Services;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private ISessionService SessionService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IUserService AuthService { get; set; }
     }

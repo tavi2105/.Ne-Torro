@@ -2,8 +2,70 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow: hidden;
 }
 
+.section-container {
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: #423d3d73;
+    border-style: solid;
+    background-color: #032541ab;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+
+h1 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-self: center;
+    margin-top: 0px;
+    padding:2px;
+}
+
+.register-body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.label-text {
+    font-size: 22px;
+    color: white;
+}
+
+.form-control {
+    height: 40px;
+    max-width: 100% !important;
+    width: 300px;
+    border-radius: 25px;
+}
+
+#register-btn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 30px;
+    width: 200px;
+    height: 45px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+    #register-btn:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
 a, .btn-link {
     color: #0366d6;
 }

@@ -2,7 +2,6 @@
 @using Services
 @using Models
 @inject ICompanyService CompanyService
-<h1>Company</h1>
 
 @if (CompanyModel == null)
 {
@@ -11,38 +10,38 @@
 }
 else
 {
-    <h2>Company Name: @CompanyModel.Name</h2>
-    <h3>Description: @CompanyModel.Description</h3>
-
-    <h2>Predictions </h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>LowPrice</th>
-                <th>HighPrice</th>
-                <th>OpenPrice</th>
-                <th>ClosePrice</th>
-                <th>Volume</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var prediction in CompanyModel.Predictions)
-            {
+    <h4>Company Name: @CompanyModel.Name</h4>
+    <h5>Description: @CompanyModel.Description</h5>
+    <h6 >Predictions </h6>
+    <div style=" height:800px;overflow-y:scroll">
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@prediction.Date</td>
-                    <td>@prediction.LowPrice</td>
-                    <td>@prediction.HighPrice</td>
-                    <td>@prediction.OpenPrice</td>
-                    <td>@prediction.ClosePrice</td>
-                    <td>@prediction.Volume</td>
+                    <th>Date</th>
+                    <th>LowPrice</th>
+                    <th>HighPrice</th>
+                    <th>OpenPrice</th>
+                    <th>ClosePrice</th>
+                    <th>Volume</th>
 
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var prediction in CompanyModel.Predictions)
+                {
+                    <tr class="predictions">
+                        <td>@prediction.Date</td>
+                        <td>@prediction.LowPrice</td>
+                        <td>@prediction.HighPrice</td>
+                        <td>@prediction.OpenPrice</td>
+                        <td>@prediction.ClosePrice</td>
+                        <td>@prediction.Volume</td>
 
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
 }
 
@@ -55,3 +54,12 @@ else
         CompanyModel = await CompanyService.GetCompany(Int32.Parse(Id));
     }
 }
+<style>
+    .company {
+        color: white;
+    }
+
+    .table {
+        color: whitesmoke;
+    }
+</style>

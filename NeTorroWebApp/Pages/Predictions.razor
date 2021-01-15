@@ -12,6 +12,7 @@
 }
 else
 {
+    <div style=" height:800px;overflow-y:scroll">
     <table class="table">
         <thead>
             <tr>
@@ -41,28 +42,31 @@ else
             }
         </tbody>
     </table>
+</div>
+
+  
     <button class="btn btn-primary" @onclick="@ShowAddPopup"> Add</button>
     /*
     <EditForm Model="@prediction" OnValidSubmit="@OnInitializedAsync">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
-    <div class="form-group">
-        <label for="Name">Name</label>
-        <InputString id="Expense" class="form-control" @bind-Value="prediction.CompanyName" />
-    </div>
-    <div class="container btn-group">
-        <div class="row">
-            <div class="col text-center">
-                <button class="btn btn-primary ">Centered button</button>
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <InputString id="Expense" class="form-control" @bind-Value="prediction.CompanyName" />
+        </div>
+        <div class="container btn-group">
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-primary ">Centered button</button>
+                </div>
             </div>
         </div>
-    </div>
-</EditForm>*/
-}
+    </EditForm>*/
+    }
 
 
-@code {
-    private List<Prediction> predictions;
+    @code {
+private List<Prediction> predictions;
     private Prediction prediction = new Prediction();
     [CascadingParameter] BlazoredModalInstance ModalInstance { get; set; }
 
@@ -104,14 +108,15 @@ else
             IsModalClosed = true;
         }
     }
-}
+    }
 
 
-<style>
-    .predictions {
-        color: navajowhite;
-    }
-    .table {
-        color: whitesmoke;
-    }
-</style>
+    <style>
+        .predictions {
+            color: white;
+        }
+
+        .table {
+            color: whitesmoke;
+        }
+    </style>

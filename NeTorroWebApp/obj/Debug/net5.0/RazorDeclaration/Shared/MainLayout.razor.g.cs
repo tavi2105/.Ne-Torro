@@ -110,6 +110,43 @@ using Blazored.Modal.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 31 "C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\Shared\MainLayout.razor"
+       
+    bool IsLoggedIn = false;
+    string Name { get; set; }
+    protected override async  Task OnAfterRenderAsync(bool firstRender)
+    {
+        var jWToken  = await service.GetToken();
+        if (jWToken != null)
+        {
+            IsLoggedIn = true;
+            StateHasChanged();
+            Name = jWToken.Name;
+
+        }
+        else
+        {
+            Name = "";
+            IsLoggedIn = false;
+            StateHasChanged();
+
+        }
+    }
+
+    public void LogOut()
+    {
+        service.DeleteToken();
+        IsLoggedIn = false;
+        StateHasChanged();
+
+
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Services.ISessionService service { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -126,7 +126,7 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\Pages\Company.razor"
+#line 48 "C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\Pages\Company.razor"
        
     private Models.Company CompanyModel { get; set; }
     [Parameter]

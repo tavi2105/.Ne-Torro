@@ -1,8 +1,11 @@
 @import '';
 
 /* _content/NeTorroWebApp/Shared/MainLayout.razor.rz.scp.css */
+body[b-mf2uf65bpz]{
+    color:white !important;
+}
+
 .page[b-mf2uf65bpz] {
-    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -12,16 +15,51 @@
 }
 
 .sidebar[b-mf2uf65bpz] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(180deg, rgb(20 248 231) 0%, #032541 70%);
 }
 
+.content[b-mf2uf65bpz] {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.main-body-id[b-mf2uf65bpz] {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://s.marketwatch.com/public/resources/images/MW-II054_reboun_ZG_20200605152839.jpg');
+    background-size: cover;
+    margin: 0px;
+}
+
+    #main-body-id[b-mf2uf65bpz]::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(171, 65, 158, 0.3);
+    }
 .top-row[b-mf2uf65bpz] {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    background-image: linear-gradient(180deg, rgb(20 248 231) 0%, #032541 70%);
+    border-bottom: 1px solid rgb(4, 23, 61);
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
+    margin: 0;
+}
+
+.log-reg[b-mf2uf65bpz] {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
 }
 
     .top-row[b-mf2uf65bpz]  a, .top-row .btn-link[b-mf2uf65bpz] {

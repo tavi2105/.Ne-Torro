@@ -30,7 +30,7 @@ namespace PredictionsApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{name}")]
+        [HttpGet("name/{companyName}")]
         public async Task<IActionResult> GetByName(string companyName)
         {
             var result = await _repository.GetCompanyByName(companyName);

@@ -1,3 +1,7 @@
+body{
+    color:white !important;
+}
+
 .page {
     display: flex;
     flex-direction: column;
@@ -8,7 +12,7 @@
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(180deg, rgb(20 248 231) 0%, #032541 70%);
 }
 
 .content {
@@ -21,7 +25,7 @@
     height: auto;
 }
 
-#main-body-id {
+.main-body-id {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -40,7 +44,7 @@
         background-color: rgba(171, 65, 158, 0.3);
     }
 .top-row {
-    background-image: linear-gradient(to right, rgb(4, 23, 61) 0%, #3a0647 70%);
+    background-image: linear-gradient(180deg, rgb(20 248 231) 0%, #032541 70%);
     border-bottom: 1px solid rgb(4, 23, 61);
     justify-content: flex-end;
     height: 3.5rem;
@@ -50,7 +54,7 @@
 }
 
 .log-reg {
-    color: palevioletred;
+    color: white;
     font-size: 20px;
     text-decoration: none;
 }

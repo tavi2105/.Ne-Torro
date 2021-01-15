@@ -126,9 +126,9 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 64 "C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\Pages\Predictions.razor"
-       
-    private List<Prediction> predictions;
+#line 68 "C:\Users\Bianca\Desktop\Net\.Ne-Torro\NeTorroWebApp\Pages\Predictions.razor"
+           
+private List<Prediction> predictions;
     private Prediction prediction = new Prediction();
     [CascadingParameter] BlazoredModalInstance ModalInstance { get; set; }
 
@@ -170,6 +170,7 @@ using Models;
             IsModalClosed = true;
         }
     }
+    
 
 #line default
 #line hidden

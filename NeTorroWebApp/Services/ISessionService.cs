@@ -10,6 +10,9 @@ namespace NeTorroWebApp.Services
     {
           void SetToken(JWToken token);
           Task<JWToken> GetToken();
+        public void DeleteToken();
+
+
 
 
     }

@@ -62,6 +62,7 @@ namespace AccountApi.Controllers
 
                 return Ok(new
                 { IdUser = user.Id,
+                   Name = user.UserName,
                     token = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo
                 }); ;

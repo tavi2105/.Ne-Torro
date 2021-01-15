@@ -1,5 +1,5 @@
-﻿@inherits LayoutComponentBase
-
+﻿@inject  Services.ISessionService service
+@inherits LayoutComponentBase
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -7,14 +7,55 @@
 
     <div class="main">
         <div class="top-row px-4">
-            <a class="log-reg" href="/Login" target="_self">Login</a>
-            <a class="log-reg" href="/Register" target="_self">Register</a>
+            @if (!IsLoggedIn)
+            {
+                <a class="log-reg" href="/Login" target="_self">Login</a>
+                <a class="log-reg" href="/Register" target="_self">Register</a>
+            }
+            else
+            {
+                <a class="log-reg" style="color:white;"> Hi  @Name !</a>
+                <a class="log-reg"style="color:white; cursor:pointer" @onclick="() => LogOut()" target="_self">Log out</a>
+
+            }
+
         </div>
 
-        <div id="main-body-id" class="content px-4">
+        <div class="content px-4 main-body-id">
             @Body
         </div>
     </div>
     <CascadingBlazoredModal />
 
 </div>
+@code {
+    bool IsLoggedIn = false;
+    string Name { get; set; }
+    protected override async  Task OnAfterRenderAsync(bool firstRender)
+    {
+        var jWToken  = await service.GetToken();
+        if (jWToken != null)
+        {
+            IsLoggedIn = true;
+            StateHasChanged();
+            Name = jWToken.Name;
+
+        }
+        else
+        {
+            Name = "";
+            IsLoggedIn = false;
+            StateHasChanged();
+
+        }
+    }
+
+    public void LogOut()
+    {
+        service.DeleteToken();
+        IsLoggedIn = false;
+        StateHasChanged();
+
+
+    }
+}

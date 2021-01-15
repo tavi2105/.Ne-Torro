@@ -23,5 +23,9 @@ namespace NeTorroWebApp.Services
         {
             return await _localStorage.GetItemAsync<JWToken>(AuthenticationToken);
         }
+        public async void DeleteToken()
+        {
+          await  _localStorage.ClearAsync();
+        }
     }
 }
